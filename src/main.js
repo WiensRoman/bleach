@@ -1,10 +1,23 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
+// import { createPinia } from 'pinia'
 import App from './App.vue'
-import router from './router'
+import PrimeVue from 'primevue/config'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const app = createApp(App)
+// app.component('font-awesome-icon', FontAwesomeIcon)
+app.use(PrimeVue, {
+  unstyled: true
+})
+// app.use(createPinia())
+const routes = []
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
 
 app.use(router)
 
