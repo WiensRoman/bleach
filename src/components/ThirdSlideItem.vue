@@ -1,6 +1,5 @@
 <script setup>
-import { ref } from 'vue'
-const props = defineProps({
+defineProps({
   id: Number,
   title: String,
   descriptionArr: Array,
@@ -18,7 +17,7 @@ const props = defineProps({
           <h2>{{ title }}</h2>
         </div>
         <div class="item-description">
-          <p v-for="dscr in descriptionArr">{{ dscr }}</p>
+          <p v-for="dscr in descriptionArr" :key="dscr.index">{{ dscr }}</p>
         </div>
       </div>
     </div>
@@ -31,7 +30,7 @@ const props = defineProps({
           <h2>{{ title }}</h2>
         </div>
         <div class="item-description">
-          <p v-for="dscr in descriptionArr">{{ dscr }}</p>
+          <p v-for="dscr in descriptionArr" :key="dscr.index">{{ dscr }}</p>
         </div>
       </div>
     </div>

@@ -27,6 +27,19 @@ h2 {
   font-size: 35px;
   font-weight: 500;
 }
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
 .header-phone {
   height: 70%;
   text-decoration: none;
@@ -250,6 +263,13 @@ h2 {
 .item-description {
   color: black;
 }
+.third-slide {
+  margin-top: 100px;
+}
+.third-slide .container-fluid {
+  display: flex;
+  flex-direction: column;
+}
 .ts-item-image {
   position: absolute;
   z-index: -1;
@@ -274,7 +294,97 @@ h2 {
   margin-right: calc(var(--bs-gutter-x) * -0.5);
   margin-left: calc(var(--bs-gutter-x) * -0.5);
 }
+.ts-card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6d19e;
+  border-radius: 13px;
+  padding: 25px 45px;
+  transition: all 0.4s ease;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+  margin-bottom: 20px;
+  border-bottom: 2.5px #e6ae6d solid;
+}
 
+.ts-card-button p,
+.ts-card-button-1134px p {
+  text-transform: uppercase;
+  color: #000;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.ts-card-button:hover,
+.ts-card-button-1134px:hover {
+  background-color: #dfbd8e;
+}
+
+.fourth-slide {
+  margin-top: 100px;
+  background-color: #efefef;
+}
+.fourth-slide .container-fluid {
+  padding: 90px 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fifth-slide .container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0;
+  background-color: #fafafa;
+}
+
+.fifth-slide-subtitle p {
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.fifth-slide-angle {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.fifth-slide-angle img {
+  max-height: 78px;
+}
+.fifth-slide-card {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px 100px;
+  padding-left: 25px;
+  box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.2);
+}
+.fifth-slide-card-text {
+  color: #000;
+  margin-left: 60px;
+}
+.fifth-slide-card-title h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.fifth-slide-subtitle {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.fifth-slide-card-subtitle p {
+  font-size: 18px;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);

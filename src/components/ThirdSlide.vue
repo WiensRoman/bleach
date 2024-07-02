@@ -61,15 +61,17 @@ let items = [
 
 <template>
   <div class="flex justify-center third-slide">
-    <component-header title="Почему мы?"></component-header>
-    <third-slide-item
-      v-for="item in items"
-      :key="item.id"
-      :id="item.id"
-      :title="item.title"
-      :imageUrl="item.imageUrl"
-      :descriptionArr="item.description"
-    ></third-slide-item>
-    <third-slide-button />
+    <div className="container-fluid">
+      <component-header title="Почему мы?"></component-header>
+      <third-slide-item
+        v-for="item in items"
+        :key="item.id"
+        :id="item.id"
+        :title="item.title"
+        :imageUrl="item.imageUrl"
+        :descriptionArr="item.description"
+      ></third-slide-item>
+      <third-slide-button />
+    </div>
   </div>
 </template>
