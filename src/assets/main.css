@@ -385,6 +385,54 @@ h2 {
 .fifth-slide-card-subtitle p {
   font-size: 18px;
 }
+
+.sixth-slide .container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fafafa;
+  padding-top: 70px;
+}
+.sixth-slide-title {
+  margin-bottom: 15px;
+}
+.sixth-slide-subtitle p,
+.sixth-slide-subtitle a {
+  color: #000;
+  font-weight: 500;
+  font-size: 22px;
+}
+.sixth-slide-subtitle {
+  text-align: center;
+}
+.gallery-slide-subtitle p .snoska,
+.sixth-slide-subtitle p span {
+  font-size: 14px;
+  font-weight: 300;
+  color: #aeaeae;
+}
+.sixth-slide-reviews {
+  align-items: center;
+  margin-top: 70px;
+}
+.sixth-slide-review-left-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+.sixth-slide-review-left-img {
+  max-width: 313px;
+  border: 3px #dac19b solid;
+  border-radius: 20px;
+  margin-top: 18px;
+}
+.sixth-slide-review-right-carousel {
+  max-width: 373px;
+  border: 3px #dac19b solid;
+  border-radius: 20px;
+  margin-left: 200px;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
