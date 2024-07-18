@@ -6,6 +6,7 @@ import ThirdSlide from './components/ThirdSlide.vue'
 import FourthSlide from './components/FourthSlide.vue'
 import FifthSlide from './components/FifthSlide.vue'
 import SixthSlide from './components/SixthSlide.vue'
+import SeventhSlide from './components/SeventhSlide.vue'
 </script>
 <template>
   <Header></Header>
@@ -15,6 +16,7 @@ import SixthSlide from './components/SixthSlide.vue'
   <FourthSlide />
   <FifthSlide />
   <SixthSlide />
+  <SeventhSlide />
 </template>
 
 <style scoped></style>

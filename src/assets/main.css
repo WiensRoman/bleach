@@ -40,6 +40,9 @@ h2 {
   margin-right: auto;
   margin-left: auto;
 }
+.logo {
+  cursor: pointer;
+}
 .header-phone {
   height: 70%;
   text-decoration: none;
@@ -115,7 +118,7 @@ h2 {
 }
 .fs-line_third-text p {
   font-weight: 300;
-  font-size: 10px;
+  font-size: 11px;
 }
 .header-link {
   height: 70%;
@@ -432,6 +435,84 @@ h2 {
   border: 3px #dac19b solid;
   border-radius: 20px;
   margin-left: 200px;
+}
+
+.seventh-slide {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.seventh-slide-text p {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 22px;
+  margin-left: 43%;
+}
+
+.seventh-slide-links {
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 43%;
+}
+
+p {
+  margin: 0;
+}
+
+.seventh-slide > .container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
+.seventh-slide-text {
+  flex-direction: column;
+}
+
+.seventh-slide-buttons {
+}
+
+.seventh-slide-button {
+  background-color: #fff;
+  border: 2px #dac19b solid;
+  border-radius: 5px;
+  justify-content: center;
+  padding: 13px 20px;
+  color: #000;
+  display: flex;
+  transition: all 0.4s ease;
+  margin-top: 15px;
+}
+
+.seventh-slide-button:hover {
+  color: #fff;
+  background-color: #dac19b;
+}
+
+.seventh-slide-buttons .second {
+  background-color: #dac19b;
+  color: #fff;
+  width: 100%;
+}
+
+.seventh-slide-buttons .second:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.seventh-slide-stick {
+  background-color: #dac19b;
+  width: 1px;
+  height: 100px;
+  margin: 0 40px;
+}
+
+.seventh-slide-icons .icons-line {
+  flex-direction: column;
+  width: 2rem;
+}
+.seventh-slide-header {
+  margin-left: 43%;
 }
 @keyframes rotate {
   0% {

@@ -2,6 +2,12 @@
 import ComponentHeader from './ComponentHeader.vue'
 import FifthSlideDescription from './FifthSlideDescription.vue'
 import FifthSlideCard from './FifthSlideCard.vue'
+import { onMounted } from 'vue'
+import AOS from 'aos'
+
+onMounted(async () => {
+  AOS.init()
+})
 
 const cardsArr = [
   {
@@ -43,7 +49,7 @@ const cardsArr = [
 </script>
 
 <template>
-  <div className="fifth-slide">
+  <div data-aos="fade-down" className="fifth-slide">
     <div className="container-fluid">
       <component-header title="КАК ВОСПОЛЬЗОВАТЬСЯ НАШИМИ УСЛУГАМИ?"></component-header>
       <fifth-slide-description></fifth-slide-description>

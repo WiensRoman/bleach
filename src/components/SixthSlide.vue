@@ -2,9 +2,16 @@
 import ComponentHeader from './ComponentHeader.vue'
 import SixthSlideSubtitle from './SixthSlideSubtitle.vue'
 import SixthSlideReviews from './SixthSlideReviews.vue'
+import { onMounted } from 'vue'
+import AOS from 'aos'
+
+onMounted(async () => {
+  AOS.init()
+})
 </script>
+
 <template>
-  <div className="sixth-slide">
+  <div data-aos="fade-down" className="sixth-slide">
     <div className="container-fluid">
       <component-header
         title="ОТЗЫВЫ КЛИЕНТОВ"

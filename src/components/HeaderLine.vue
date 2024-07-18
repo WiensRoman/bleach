@@ -6,10 +6,6 @@ import IconsWrapper from './IconsWrapper.vue'
   <div class="flex ml-96">
     <div class="header-link mx-4">
       <span class="text-lg font-bold">Услуги</span>
-      <ul>
-        <li><span class="text-lg font-bold">Услуги</span></li>
-        <li><span class="text-lg font-bold">Сервис Loro Piana</span></li>
-      </ul>
     </div>
     <div class="header-link mx-4 hover:transition-transform text-lg font-bold">
       <span>Примеры работ</span>

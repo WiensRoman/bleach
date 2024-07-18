@@ -2,6 +2,13 @@
 import ThirdSlideItem from '../components/ThirdSlideItem.vue'
 import ThirdSlideButton from '../components/ThirdSlideButton.vue'
 import ComponentHeader from '../components/ComponentHeader.vue'
+import { onMounted } from 'vue'
+import AOS from 'aos'
+
+onMounted(async () => {
+  AOS.init()
+})
+
 // defineProps({
 //   items: Array
 // })
@@ -53,6 +60,7 @@ let items = [
     row: false
   }
 ]
+
 // items = items.map(() => {
 //   items.id / 2 ? (items.row = true) : (items.row = false)
 // })
@@ -60,7 +68,7 @@ let items = [
 </script>
 
 <template>
-  <div class="flex justify-center third-slide">
+  <div data-aos="fade-down" class="flex justify-center third-slide">
     <div className="container-fluid">
       <component-header title="Почему мы?"></component-header>
       <third-slide-item
