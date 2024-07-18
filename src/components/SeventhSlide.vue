@@ -1,6 +1,6 @@
 <script setup>
-import SeventhSlideContacts from './SeventhSlideContacts.vue'
-import SeventhSlideLinks from '../components/SeventhSlideLinks.vue'
+import Contacts from './Contacts.vue'
+import ContactsLinks from '../components/ContactsLinks.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
 
@@ -15,8 +15,8 @@ onMounted(async () => {
       <div class="seventh-slide-header">
         <h1>Контакты</h1>
       </div>
-      <SeventhSlideContacts></SeventhSlideContacts>
-      <SeventhSlideLinks></SeventhSlideLinks>
+      <Contacts></Contacts>
+      <ContactsLinks></ContactsLinks>
     </div>
   </div>
 </template>

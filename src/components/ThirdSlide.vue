@@ -1,6 +1,6 @@
 <script setup>
 import ThirdSlideItem from '../components/ThirdSlideItem.vue'
-import ThirdSlideButton from '../components/ThirdSlideButton.vue'
+import ComponentButton from '../components/ComponentButton.vue'
 import ComponentHeader from '../components/ComponentHeader.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
@@ -79,7 +79,7 @@ let items = [
         :imageUrl="item.imageUrl"
         :descriptionArr="item.description"
       ></third-slide-item>
-      <third-slide-button />
+      <component-button title="Рассчитать стоимость" />
     </div>
   </div>
 </template>

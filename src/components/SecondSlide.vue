@@ -1,7 +1,7 @@
 <script setup>
 import SecondSlideCarousel from '../components/SecondSlideCarousel.vue'
 import SecondSlideText from '../components/SecondSlideText.vue'
-import SecondSlideButton from '../components/SecondSlideButton.vue'
+import ComponentButton from '../components/ComponentButton.vue'
 import ComponentHeader from './ComponentHeader.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
@@ -17,7 +17,7 @@ onMounted(async () => {
       <component-header title="НАШИ РАБОТЫ ДО/ПОСЛЕ" />
       <second-slide-carousel />
       <second-slide-text />
-      <second-slide-button />
+      <component-button title="Посмотреть" />
     </div>
   </div>
 </template>

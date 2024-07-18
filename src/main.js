@@ -6,6 +6,10 @@ import App from './App.vue'
 import PrimeVue from 'primevue/config'
 import { createRouter, createWebHistory } from 'vue-router'
 import 'aos/dist/aos.css'
+import Home from '@/views/Home.vue'
+import Services from '@/views/Services.vue'
+import Examples from '@/views/Examples.vue'
+import FifthSlide from '@/components/FifthSlide.vue'
 
 const app = createApp(App)
 // app.component('font-awesome-icon', FontAwesomeIcon)
@@ -14,7 +18,12 @@ app.use(PrimeVue, {
 })
 
 // app.use(createPinia())
-const routes = []
+const routes = [
+  { path: '/', name: 'Home', component: Home },
+  { path: '/services', name: 'Services', component: Services },
+  { path: '/examples', name: 'Examples', component: Examples },
+  { path: '/work', name: 'FifthSlide', component: FifthSlide }
+]
 
 const router = createRouter({
   history: createWebHistory(),
