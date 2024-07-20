@@ -314,6 +314,17 @@ h2 {
   border-bottom: 2.5px #e6ae6d solid;
 }
 
+.ts-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 536px;
+  width: 565px;
+  padding: 80px 80px;
+  padding-right: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
 .ts-card-button p,
 .ts-card-button-1134px p {
   text-transform: uppercase;
@@ -321,6 +332,31 @@ h2 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 600;
   font-size: 14px;
+}
+
+.ts-cards-top {
+  justify-content: center;
+  align-items: center;
+}
+.ts-card-text p {
+  color: #000;
+  font-size: 20px;
+}
+
+.ts-card-title h3 {
+  color: #000;
+  font-size: 23px;
+  font-weight: 600;
+  z-index: 3;
+  position: relative;
+}
+
+.ts-image img {
+  max-width: 200px;
+  position: absolute;
+  top: 151px;
+  right: 35px;
+  z-index: 1;
 }
 
 .button:hover,
@@ -448,7 +484,7 @@ h2 {
   font-weight: 500;
   font-size: 18px;
   margin-top: 22px;
-  margin-left: 43%;
+  margin-left: 41%;
   color: #000;
 }
 
@@ -517,12 +553,23 @@ p {
   margin-left: 43%;
 }
 
+.services .container-fluid {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .services-card {
   /* width: 360px; */
   max-height: 860px;
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .services-card img {
   height: 336px;
@@ -569,6 +616,42 @@ p {
 .services-card-button:hover {
   background-color: #d9c09a;
 }
+
+.services-cards-title {
+  margin-bottom: 50px;
+}
+
+.services-cards-title h3 {
+  color: #000;
+  font-weight: 500;
+  font-size: 36px;
+  text-align: left;
+}
+
+.services-title h2 {
+  color: #000;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.services-cards {
+  margin-top: 100px;
+  max-width: 1116px;
+}
+.сol-lg-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+.services-card img {
+  height: 336px;
+}
+
+.services-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);

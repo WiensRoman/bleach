@@ -4,6 +4,27 @@ import ServiceCard from '@/components/ServiceCard.vue'
 import Contacts from '@/components/Contacts.vue'
 import ContactsLinks from '@/components/ContactsLinks.vue'
 
+let filteredItems = []
+
+const rows = [
+  {
+    id: 0,
+    title: 'Чистка обуви'
+  },
+  {
+    id: 1,
+    title: 'Реставрация обуви и курток'
+  },
+  {
+    id: 2,
+    title: 'Ремонт обуви'
+  },
+  {
+    id: 3,
+    title: 'Чистка и реставрация сумок'
+  }
+]
+
 const items = [
   {
     id: 0,
@@ -18,7 +39,7 @@ const items = [
       'Водоотталкивающая пропитка +500 руб.',
       'Чистка обуви любых типов, брендов и из любых материалов. Выведение реагентов, трудных пятен и запахов. Чистка внутри и снаружи, чистка шнурков и дезодорант.'
     ],
-    row: false
+    rowType: 0
   },
   {
     id: 1,
@@ -32,7 +53,7 @@ const items = [
       'реагентов (по необходимости, в несколько',
       'этапов) и покраску / тонирование.'
     ],
-    row: false
+    rowType: 0
   },
   {
     id: 2,
@@ -47,7 +68,7 @@ const items = [
       'части обуви, восстановление цвета и',
       'полировка, а так же обработка подошвы.'
     ],
-    row: false
+    rowType: 0
   },
   {
     id: 3,
@@ -66,7 +87,7 @@ const items = [
       'Маскировка контрастной нити / сложная',
       'оклейка +1000 руб.'
     ],
-    row: false
+    rowType: 1
   },
   {
     id: 4,
@@ -78,7 +99,7 @@ const items = [
       'Реставрация лаковых каблуков / мысов - 7000 руб.',
       'Реставрация лаковых мысов + каблуков - 10 000 руб.'
     ],
-    row: false
+    rowType: 1
   },
   {
     id: 5,
@@ -92,7 +113,7 @@ const items = [
       'Оценка стоимости производится по фото в',
       'WhatsApp или в нашем приемном пункте.'
     ],
-    row: false
+    rowType: 1
   },
   {
     id: 6,
@@ -104,7 +125,7 @@ const items = [
       'Профилактика глянцевая - 3000 руб.',
       'Подбор цвета профилактики'
     ],
-    row: false
+    rowType: 2
   },
   {
     id: 7,
@@ -116,7 +137,7 @@ const items = [
       'Набойки стандарт - 1500 руб.',
       'Набойки тракторные - 2000 руб.'
     ],
-    row: false
+    rowType: 2
   },
   {
     id: 8,
@@ -130,7 +151,7 @@ const items = [
       'стыке подошвы и верха) - от 1500 руб.',
       'Изготовление стелек - 1000-1500 руб'
     ],
-    row: false
+    rowType: 2
   },
   {
     id: 9,
@@ -142,7 +163,7 @@ const items = [
       'от бренда Loro Piana - оригинальная подошва',
       'очень быстро желтеет, теряя товарный вид.'
     ],
-    row: false
+    rowType: 2
   },
   {
     id: 10,
@@ -155,7 +176,7 @@ const items = [
       'Замена молнии более 20 см (одна) - 3000 р.',
       'Замена молнии более 25 см (две) - 5000 р.'
     ],
-    row: false
+    rowType: 2
   },
   {
     id: 11,
@@ -167,7 +188,7 @@ const items = [
       'Более 25см (без подклада) - 4000 руб.',
       'Чистка подклада - 2500 руб.'
     ],
-    row: false
+    rowType: 3
   },
   {
     id: 12,
@@ -175,7 +196,7 @@ const items = [
     title: 'Реставрация углов сумки',
     price: 'от 4000 р.',
     text: ['Реставрация 1-2 углов - 4000 руб.', 'Реставрация 3-4 углов - 5000 руб.'],
-    row: false
+    rowType: 3
   },
   {
     id: 13,
@@ -190,7 +211,7 @@ const items = [
       'Сумка (корпус) - 5000 руб.',
       'Ремешок от 25см - 5000 руб.'
     ],
-    row: false
+    rowType: 3
   },
   {
     id: 14,
@@ -204,7 +225,7 @@ const items = [
       'Металлик цвет +2 000 руб.',
       'Маскировка нити / сложная оклейка +2000 руб.'
     ],
-    row: false
+    rowType: 3
   },
   {
     id: 15,
@@ -217,7 +238,7 @@ const items = [
       'Металлик цвет +2 000 руб.',
       'Маскировка нити / сложная оклейка +2000 руб.'
     ],
-    row: false
+    rowType: 3
   },
   {
     id: 16,
@@ -232,28 +253,53 @@ const items = [
       'Ремонт / изготовление петельки (одна) - 2000/3000 р.',
       'Ремонт / изготовление петельки (две) 3500/5000 р.'
     ],
-    row: false
+    rowType: 3
   }
 ]
+
+const renderCards = (rowId) => {
+  console.log(rowId)
+
+  filteredItems = items.filter((item) => {
+    console.log(item)
+    console.log(item.rowType)
+    console.log(rowId)
+    console.log(item.rowType == rowId)
+    return item.rowType == rowId ? item : null
+  })
+  console.log(filteredItems)
+}
 </script>
 
 <template>
   <div className="services">
-    <component-header title="НАШИ УСЛУГИ" className="text-center"></component-header>
     <div class="container-fluid">
-      <service-card
-        v-for="item in items"
-        :key="item.id"
-        :id="item.id"
-        :title="item.title"
-        :price="item.price"
-        :imageUrl="item.imageUrl"
-        :textArr="item.text"
-      >
-      </service-card
-      ><component-header title="Контакты" className="text-center"></component-header>
-      <contacts />
-      <ContactsLinks />
+      <component-header
+        title="НАШИ УСЛУГИ"
+        className="text-center services-title"
+      ></component-header>
+      <div className="services-cards">
+        <div className="services-cards-title" v-for="row in rows" :key="row.id">
+          <h3>{{ row.title }}</h3>
+
+          <div className="row">
+            {{ renderCards(row.id) }}
+            <service-card
+              v-for="item in filteredItems"
+              :key="item.id"
+              :id="item.id"
+              :title="item.title"
+              :price="item.price"
+              :imageUrl="item.imageUrl"
+              :textArr="item.text"
+            >
+            </service-card>
+          </div>
+        </div>
+        <component-header title="Контакты" className="text-center"></component-header>
+        <contacts />
+        <ContactsLinks />
+      </div>
     </div>
   </div>
 </template>

@@ -5,34 +5,16 @@ defineProps({
   descriptionArr: Array,
   imageUrl: String
 })
-// const ['row_' + props.id / 2] = ref()
-
-const addRow = (row) => {
-  console.log(id)
-}
 </script>
 
 <template>
-  <div v-if="!(id % 2)" :class="'row_' + id / 2" :ref="'row_' + id / 2" @v-model="'row_' + id / 2">
-    <div class="third-slide-item">
-      <div class="ts-item-image"><img :src="imageUrl" /></div>
-      <div>
-        <h2>{{ title }}</h2>
-      </div>
-      <div class="item-description">
-        <p v-for="dscr in descriptionArr" :key="dscr.index">{{ dscr }}</p>
-      </div>
+  <div class="ts-card" :style="{ backgroundImage: 'url(' + imageUrl + ')' }">
+    <div className="ts-card-title">
+      <h3>{{ title }}</h3>
     </div>
-  </div>
-  <div v-else @v-html="'row_' + id / 2">
-    <div class="third-slide-item">
-      <div class="ts-item-image"><img :src="imageUrl" /></div>
-      <div>
-        <h2>{{ title }}</h2>
-      </div>
-      <div class="item-description">
-        <p v-for="dscr in descriptionArr" :key="dscr.index">{{ dscr }}</p>
-      </div>
+    <div class="ts-card-text">
+      <p v-for="dscr in descriptionArr" :key="dscr.index">{{ dscr }}</p>
     </div>
+    <div v-if="id == 1" className="ts-image"><img src="../assets/component_2.png" /></div>
   </div>
 </template>

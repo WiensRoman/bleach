@@ -10,8 +10,8 @@ defineProps({
 </script>
 
 <template>
-  <div className="services-card">
-    <div className="services-cards-img"><img :src="imageUrl" /></div>
+  <div className="services-card сol-lg-4">
+    <div className="services-card-img"><img :src="imageUrl" /></div>
     <div className="services-card-title">
       <h4>{{ title }}</h4>
     </div>

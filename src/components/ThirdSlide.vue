@@ -9,9 +9,9 @@ onMounted(async () => {
   AOS.init()
 })
 
-// defineProps({
-//   items: Array
-// })
+let filteredItems = []
+
+let rows = [0, 1]
 
 let items = [
   {
@@ -24,7 +24,7 @@ let items = [
       'прошли через наши руки.'
     ],
     imageUrl: 'src/assets/component_1.png',
-    row: false
+    rowType: 0
   },
   {
     id: 1,
@@ -35,8 +35,8 @@ let items = [
       'вы присылаете нам и',
       'даём гарантию результата'
     ],
-    imageUrl: 'src/assets/component_2.png',
-    row: false
+    imageUrl: 'src/assets/component_10_7.png',
+    rowType: 0
   },
   {
     id: 2,
@@ -50,35 +50,46 @@ let items = [
       'вами гораздо дольше!'
     ],
     imageUrl: 'src/assets/component_3.png',
-    row: false
+    rowType: 1
   },
   {
     id: 3,
     title: 'Бесплатная доставка в пределах МКАД',
     description: ['Наш курьер заберет ваши изделия', 'и доставит готовый заказ в удобное время'],
     imageUrl: 'src/assets/component_4.png',
-    row: false
+    rowType: 1
   }
 ]
-
-// items = items.map(() => {
-//   items.id / 2 ? (items.row = true) : (items.row = false)
-// })
-// console.log(items)
+const renderCards = (rowId) => {
+  console.log(rowId)
+  filteredItems = []
+  filteredItems = items.filter((item) => {
+    console.log(item)
+    console.log(item.rowType)
+    console.log(rowId)
+    console.log(item.rowType == rowId)
+    console.log(filteredItems)
+    return item.rowType == rowId ? item : null
+  })
+  console.log(filteredItems)
+}
 </script>
 
 <template>
   <div data-aos="fade-down" class="flex justify-center third-slide">
     <div className="container-fluid">
       <component-header title="Почему мы?"></component-header>
-      <third-slide-item
-        v-for="item in items"
-        :key="item.id"
-        :id="item.id"
-        :title="item.title"
-        :imageUrl="item.imageUrl"
-        :descriptionArr="item.description"
-      ></third-slide-item>
+      <div className="row ts-cards-top" v-for="row in rows" :key="row">
+        {{ renderCards(row) }}
+        <third-slide-item
+          v-for="item in filteredItems"
+          :key="item.id"
+          :id="item.id"
+          :title="item.title"
+          :imageUrl="item.imageUrl"
+          :descriptionArr="item.description"
+        ></third-slide-item>
+      </div>
       <component-button title="Рассчитать стоимость" />
     </div>
   </div>
