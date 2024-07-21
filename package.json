@@ -23,6 +23,7 @@
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
     "aos": "^2.3.4",
+    "axios": "^1.7.2",
     "primeicons": "^7.0.0",
     "primevue": "^3.52.0",
     "swiper": "^11.1.4",

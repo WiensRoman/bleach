@@ -3,27 +3,29 @@ import ComponentHeader from '../components/ComponentHeader.vue'
 import ServiceCard from '@/components/ServiceCard.vue'
 import Contacts from '@/components/Contacts.vue'
 import ContactsLinks from '@/components/ContactsLinks.vue'
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
 
 let filteredItems = []
-
-const rows = [
-  {
-    id: 0,
-    title: 'Чистка обуви'
-  },
-  {
-    id: 1,
-    title: 'Реставрация обуви и курток'
-  },
-  {
-    id: 2,
-    title: 'Ремонт обуви'
-  },
-  {
-    id: 3,
-    title: 'Чистка и реставрация сумок'
-  }
-]
+const rows = ref([])
+// const rows = [
+//   {
+//     id: 0,
+//     title: 'Чистка обуви'
+//   },
+//   {
+//     id: 1,
+//     title: 'Реставрация обуви и курток'
+//   },
+//   {
+//     id: 2,
+//     title: 'Ремонт обуви'
+//   },
+//   {
+//     id: 3,
+//     title: 'Чистка и реставрация сумок'
+//   }
+// ]
 
 const items = [
   {
@@ -256,18 +258,25 @@ const items = [
     rowType: 3
   }
 ]
+const fetchItems = async () => {
+  try {
+    const { data } = await axios.get('https://d8618ff445c5b9a8.mokky.dev/serviceTypes', {})
+    rows.value = data.map((obj) => ({
+      ...obj
+    }))
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+onMounted(async () => {
+  await fetchItems()
+})
 
 const renderCards = (rowId) => {
-  console.log(rowId)
-
   filteredItems = items.filter((item) => {
-    console.log(item)
-    console.log(item.rowType)
-    console.log(rowId)
-    console.log(item.rowType == rowId)
     return item.rowType == rowId ? item : null
   })
-  console.log(filteredItems)
 }
 </script>
 

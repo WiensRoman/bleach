@@ -61,24 +61,17 @@ let items = [
   }
 ]
 const renderCards = (rowId) => {
-  console.log(rowId)
   filteredItems = []
   filteredItems = items.filter((item) => {
-    console.log(item)
-    console.log(item.rowType)
-    console.log(rowId)
-    console.log(item.rowType == rowId)
-    console.log(filteredItems)
     return item.rowType == rowId ? item : null
   })
-  console.log(filteredItems)
 }
 </script>
 
 <template>
   <div data-aos="fade-down" class="flex justify-center third-slide">
     <div className="container-fluid">
-      <component-header title="Почему мы?"></component-header>
+      <component-header title="ПОЧЕМУ МЫ?"></component-header>
       <div className="row ts-cards-top" v-for="row in rows" :key="row">
         {{ renderCards(row) }}
         <third-slide-item

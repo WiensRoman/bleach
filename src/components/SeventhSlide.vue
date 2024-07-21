@@ -13,7 +13,7 @@ onMounted(async () => {
   <div data-aos="fade-down" className="seventh-slide">
     <div className="container-fluid flex">
       <div class="seventh-slide-header">
-        <h1>Контакты</h1>
+        <h1>КОНТАКТЫ</h1>
       </div>
       <Contacts></Contacts>
       <ContactsLinks></ContactsLinks>

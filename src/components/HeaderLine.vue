@@ -8,11 +8,11 @@ import IconsWrapper from './IconsWrapper.vue'
       <RouterLink to="/services"><span class="text-lg font-bold">Услуги</span></RouterLink>
     </div>
     <div class="header-link mx-4 hover:transition-transform text-lg font-bold">
-      <RouterLink to="/examples"><span>Примеры работ</span></RouterLink>
+      <RouterLink to="/gallery"><span>Примеры работ</span></RouterLink>
     </div>
     <div class="header-link mx-4 text-lg font-bold"><span>Как мы работаем</span></div>
     <div class="header-link mx-4 text-lg font-bold"><span>Контакты</span></div>
-    <div class="header-phone mx-4 text-lg font-bold"><span>+7(925)435-01-01</span></div>
+    <div class="header-phone mx-4 text-lg font-bold"><span>+7(925)516-33-17</span></div>
     <IconsWrapper class="w-24 flex ml-8 mr-4 icons-line" />
   </div>
 </template>

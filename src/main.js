@@ -8,7 +8,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import 'aos/dist/aos.css'
 import Home from '@/views/Home.vue'
 import Services from '@/views/Services.vue'
-import Examples from '@/views/Examples.vue'
+import Gallery from '@/views/Gallery.vue'
 import FifthSlide from '@/components/FifthSlide.vue'
 
 const app = createApp(App)
@@ -21,7 +21,7 @@ app.use(PrimeVue, {
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/services', name: 'Services', component: Services },
-  { path: '/examples', name: 'Examples', component: Examples },
+  { path: '/gallery', name: 'Gallery', component: Gallery },
   { path: '/work', name: 'FifthSlide', component: FifthSlide }
 ]
 
