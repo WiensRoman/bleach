@@ -12,7 +12,9 @@ import IconsWrapper from './IconsWrapper.vue'
     </div>
     <div class="header-link mx-4 text-lg font-bold"><span>Как мы работаем</span></div>
     <div class="header-link mx-4 text-lg font-bold"><span>Контакты</span></div>
-    <div class="header-phone mx-4 text-lg font-bold"><span>+7(925)516-33-17</span></div>
+    <div class="header-phone mx-4 text-lg font-bold">
+      <a href="tel:+79255163317">+7(925)516-33-17</a>
+    </div>
     <IconsWrapper class="w-24 flex ml-8 mr-4 icons-line" />
   </div>
 </template>

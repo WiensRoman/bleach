@@ -83,7 +83,7 @@ const renderCards = (rowId) => {
           :descriptionArr="item.description"
         ></third-slide-item>
       </div>
-      <component-button title="Рассчитать стоимость" />
+      <component-button title="Рассчитать стоимость" :isLink="true" />
     </div>
   </div>
 </template>

@@ -24,6 +24,7 @@ defineProps({
     <component-button
       className="services-card-button"
       title="Рассчитать стоимость"
+      :isLink="true"
     ></component-button>
   </div>
 </template>

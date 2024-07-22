@@ -9,11 +9,9 @@ import ComponentButton from './ComponentButton.vue'
       <component-button
         className="seventh-slide-button"
         title="Рассчитать стоимость"
+        :isLink="true"
       ></component-button>
-      <component-button
-        className="seventh-slide-button second"
-        title="Позвонить"
-      ></component-button>
+      <a className="seventh-slide-button second" href="tel:+79255163317">Позвонить</a>
     </div>
     <div className="seventh-slide-stick"></div>
     <div className="seventh-slide-icons">

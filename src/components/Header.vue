@@ -8,11 +8,9 @@ import HeaderLine from './HeaderLine.vue'
     <div class="flex">
       <RouterLink to="/"><img src="/logo.png" alt="Logo" class="w-40 logo" /></RouterLink>
       <HeaderLine />
-      <button
-        class="bg-black hover:text-black hover:bg-white border-2 rounded-3xl text-white h-12 px-5 mt-5"
-      >
-        Рассчитать стоимость
-      </button>
+      <a href="https://wa.me//79255163317" className="header-button">
+        <span>Рассчитать стоимость</span>
+      </a>
     </div>
   </div>
 </template>

@@ -61,6 +61,27 @@ h2 {
   position: relative;
   cursor: pointer;
 }
+
+.header-button {
+  display: flex;
+  background-color: #000;
+  border-radius: 25px;
+  margin-left: 20px;
+  align-items: center;
+  padding: 9px 24px;
+  border: 1px #000 solid;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s ease;
+  margin-top: 20px;
+  height: 50px;
+}
+
+.header-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .first-slide {
   background-size: cover;
   background-repeat: no-repeat;
@@ -135,13 +156,13 @@ h2 {
   cursor: pointer;
 }
 .header-link span:hover::before,
-.header-phone span:hover::before {
+.header-phone a:hover::before {
   transform: scaleX(1);
   transition: transform 0.3s;
   transform-origin: left;
 }
 .header-link span::before,
-.header-phone span::before {
+.header-phone a::before {
   display: flex;
   width: 100%;
   content: '';
@@ -156,8 +177,16 @@ h2 {
   transform-origin: right;
 }
 
-.icons-line svg:hover {
+.icons-line a:hover {
   cursor: pointer;
+}
+
+.header-icon {
+  width: 100%;
+  height: 100%;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  margin-top: 35%;
 }
 .fs-line_first {
   transform: rotate(-90deg);
