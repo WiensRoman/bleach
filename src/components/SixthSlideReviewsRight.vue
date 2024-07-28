@@ -25,6 +25,7 @@ import { Controller, Navigation, Autoplay } from 'swiper/modules'
       <swiper-slide><img src="../assets/review_carousel_4.png" /></swiper-slide>
       <swiper-slide><img src="../assets/review_carousel_5.png" /></swiper-slide>
       <swiper-slide><img src="../assets/review_carousel_6.png" /></swiper-slide>
+      <swiper-slide><img src="../assets/otziv_new_7.png" /></swiper-slide>
       <div class="carousel-control-prev"><span class="s-button-prev"></span></div>
       <div class="carousel-control-next"><span class="s-button-next"></span></div>
     </swiper>

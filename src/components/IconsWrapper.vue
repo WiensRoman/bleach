@@ -18,7 +18,7 @@
           /></svg
       ></a>
     </div>
-    <div className="header-icon" style="margin-top: 37%">
+    <div className="header-icon" style="margin-top: 27%">
       <a href="https://t.me/Wiensus"
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
           <path

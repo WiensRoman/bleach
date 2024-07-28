@@ -49,7 +49,7 @@ const cardsArr = [
 </script>
 
 <template>
-  <div data-aos="fade-down" className="fifth-slide">
+  <div data-aos="fade-down" className="fifth-slide" id="work">
     <div className="container-fluid">
       <component-header title="КАК ВОСПОЛЬЗОВАТЬСЯ НАШИМИ УСЛУГАМИ?"></component-header>
       <fifth-slide-description></fifth-slide-description>

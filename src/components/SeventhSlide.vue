@@ -15,7 +15,7 @@ onMounted(async () => {
       <div class="seventh-slide-header">
         <h1>КОНТАКТЫ</h1>
       </div>
-      <Contacts></Contacts>
+      <Contacts id="contacts"></Contacts>
       <ContactsLinks></ContactsLinks>
     </div>
   </div>

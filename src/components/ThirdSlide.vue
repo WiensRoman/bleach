@@ -56,7 +56,7 @@ let items = [
     id: 3,
     title: 'Бесплатная доставка в пределах МКАД',
     description: ['Наш курьер заберет ваши изделия', 'и доставит готовый заказ в удобное время'],
-    imageUrl: 'src/assets/component_4.png',
+    imageUrl: 'src/assets/component_10_7.png',
     rowType: 1
   }
 ]
