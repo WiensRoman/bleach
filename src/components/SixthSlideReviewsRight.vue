@@ -18,14 +18,11 @@ import { Controller, Navigation, Autoplay } from 'swiper/modules'
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
-      <swiper-slide><img src="../assets/review_carousel_0.png" /></swiper-slide>
-      <swiper-slide><img src="../assets/review_carousel_1.png" /></swiper-slide>
-      <swiper-slide><img src="../assets/review_carousel_2.png" /></swiper-slide>
-      <swiper-slide><img src="../assets/review_carousel_3.jpg" /></swiper-slide>
-      <swiper-slide><img src="../assets/review_carousel_4.png" /></swiper-slide>
-      <swiper-slide><img src="../assets/review_carousel_5.png" /></swiper-slide>
-      <swiper-slide><img src="../assets/review_carousel_6.png" /></swiper-slide>
-      <swiper-slide><img src="../assets/otziv_new_7.png" /></swiper-slide>
+      <swiper-slide><img src="../assets/otziv_new_13-fotor.png" /></swiper-slide>
+      <swiper-slide><img src="../assets/otziv_new_12-fotor.png" /></swiper-slide>
+      <swiper-slide><img src="../assets/otziv_new_14-fotor.png" /></swiper-slide>
+      <swiper-slide><img src="../assets/otziv_new_10-fotor.png" /></swiper-slide>
+      <swiper-slide><img src="../assets/otziv_new_7-fotor.png" /></swiper-slide>
       <div class="carousel-control-prev"><span class="s-button-prev"></span></div>
       <div class="carousel-control-next"><span class="s-button-next"></span></div>
     </swiper>

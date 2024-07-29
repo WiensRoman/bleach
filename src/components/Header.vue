@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import HeaderLine from './HeaderLine.vue'
+import HeaderProfile from './HeaderProfile.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import HeaderLine from './HeaderLine.vue'
       </div>
 
       <HeaderLine />
+      <HeaderProfile />
       <a href="https://wa.me//79255163317" className="header-button">
         <span>Рассчитать стоимость</span>
       </a>

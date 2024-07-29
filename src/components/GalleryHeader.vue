@@ -9,7 +9,7 @@
     <p>Больше примеров работ в формате <span>До/После,</span></p>
     <p>
       а также примеры работ с другими изделиями из кожи и замши у нас в
-      <a href="">Инстраграм</a>
+      <a href="https://www.instagram.com/romanwiens">Инстаграм</a>
     </p>
     <p>
       <span className="snoska"

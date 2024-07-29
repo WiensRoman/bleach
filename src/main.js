@@ -9,7 +9,9 @@ import 'aos/dist/aos.css'
 import Home from '@/views/Home.vue'
 import Services from '@/views/Services.vue'
 import Gallery from '@/views/Gallery.vue'
-import FifthSlide from '@/components/FifthSlide.vue'
+import Shop from './views/Shop.vue'
+import Courier from './views/Courier.vue'
+import Favorites from './views/Favorites.vue'
 
 const app = createApp(App)
 // app.component('font-awesome-icon', FontAwesomeIcon)
@@ -22,7 +24,9 @@ const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/services', name: 'Services', component: Services },
   { path: '/gallery', name: 'Gallery', component: Gallery },
-  { path: '/work', name: 'FifthSlide', component: FifthSlide }
+  { path: '/shop', name: 'Shop', component: Shop },
+  { path: '/courier', name: 'Courier', component: Courier },
+  { path: '/favorites', name: 'Favorites', component: Favorites }
 ]
 
 const router = createRouter({
