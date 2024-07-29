@@ -880,6 +880,18 @@ p {
   transform: scale(103%);
   box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.45);
 }
+
+.drawer-title {
+  color: #000;
+}
+
+.drawer-container {
+  padding-top: 80px;
+}
+
+.drawer-item-description {
+  color: #000;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -1005,13 +1017,34 @@ p {
 ////// FAVORITES /////
 //////////////////////
 */
+.favorites-container {
+  padding: 160px 220px;
+  padding-bottom: 40px;
+}
 
+.favorites-title {
+  color: #000;
+  text-align: center;
+}
 /*
 //////////////////////
 /////// SHOP /////////
 //////////////////////
 */
 
+.shop-container {
+  padding: 160px 220px;
+  padding-bottom: 40px;
+}
+.shop-card b,
+.shop-card p {
+  color: #000;
+}
+
+.shop-card .like,
+.shop-card .add {
+  width: 15%;
+}
 /*
 //////////////////////
 ////// ADAPTIVE //////

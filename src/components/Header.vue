@@ -2,6 +2,11 @@
 <script setup>
 import HeaderLine from './HeaderLine.vue'
 import HeaderProfile from './HeaderProfile.vue'
+
+defineProps({
+  totalPrice: Number
+})
+const emit = defineEmits(['openDrawer'])
 </script>
 
 <template>
@@ -14,7 +19,7 @@ import HeaderProfile from './HeaderProfile.vue'
       </div>
 
       <HeaderLine />
-      <HeaderProfile />
+      <HeaderProfile :total-price="totalPrice" @open-drawer="emit('openDrawer')" />
       <a href="https://wa.me//79255163317" className="header-button">
         <span>Рассчитать стоимость</span>
       </a>
