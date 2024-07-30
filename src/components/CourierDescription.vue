@@ -4,7 +4,7 @@
   <div className="courier-description">
     <div className="description">
       <div className="description-icon"><img src="../assets/ruble-sign-solid.svg" /></div>
-      <p>Забор + доставка стоят 400 рублей.</p>
+      <p>Забор стоит 200 рублей,доставка бесплатная.</p>
     </div>
     <div className="description">
       <div className="description-icon"><img src="../assets/clock-regular.svg" /></div>

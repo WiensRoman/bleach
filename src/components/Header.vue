@@ -6,7 +6,7 @@ import HeaderProfile from './HeaderProfile.vue'
 defineProps({
   totalPrice: Number
 })
-const emit = defineEmits(['openDrawer'])
+const emit = defineEmits(['openDrawer', 'openProfileModal'])
 </script>
 
 <template>
@@ -19,7 +19,11 @@ const emit = defineEmits(['openDrawer'])
       </div>
 
       <HeaderLine />
-      <HeaderProfile :total-price="totalPrice" @open-drawer="emit('openDrawer')" />
+      <HeaderProfile
+        :total-price="totalPrice"
+        @open-drawer="emit('openDrawer')"
+        @open-profile-modal="emit('openProfileModal')"
+      />
       <a href="https://wa.me//79255163317" className="header-button">
         <span>Рассчитать стоимость</span>
       </a>

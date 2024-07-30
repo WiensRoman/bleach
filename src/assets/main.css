@@ -436,6 +436,10 @@ h2 {
   position: relative;
 }
 
+.ts-card-title {
+  width: 80%;
+}
+
 .ts-image img {
   max-width: 200px;
   position: absolute;
@@ -654,7 +658,8 @@ h2 {
 .seventh-slide-links {
   align-items: center;
   margin-top: 40px;
-  margin-left: 43%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 p {
@@ -1045,6 +1050,177 @@ p {
 .shop-card .add {
   width: 15%;
 }
+
+/*
+////////////////////////
+///// PROFILE MODAL /////
+////////////////////////
+*/
+
+.profile-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+}
+.modal-container {
+  background-color: #ffff;
+  padding: 20px 60px;
+  width: 25%;
+  height: 50%;
+  border-radius: 0.75rem;
+  box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+}
+.modal-container h2 {
+  color: #000;
+}
+
+.modal-container span {
+  color: #000;
+  font-weight: 700;
+}
+
+.modal-title {
+  text-align: center;
+}
+.profile-modal input {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 24px;
+  color: #555;
+  background-color: #f1f1f1;
+  transition: all 0.2s ease;
+}
+
+.profile-modal input:focus {
+  border-color: #f6d19e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+  outline: 0;
+}
+.modal-button {
+  display: flex;
+  background-color: #f6d19e;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.4s ease;
+  border-bottom: 2.5px #e6ae6d solid;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.modal-button {
+  display: flex;
+  background-color: #f6d19e;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.4s ease;
+  border-bottom: 2.5px #e6ae6d solid;
+  margin-top: 10px;
+  font-weight: 500;
+  width: 30%;
+  justify-content: center;
+}
+.modal-button:hover {
+  background-color: #b99f78;
+}
+.modal-button-second {
+  display: flex;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.4s ease;
+  margin-top: 10px;
+  color: #f6d19e;
+  font-weight: 500;
+  width: 40%;
+  justify-content: center;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-button-second:hover {
+  text-decoration-line: underline;
+}
+.form-border {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom-width: 1px;
+  text-align: center;
+}
+
+.form-border-undertitle {
+  position: relative;
+  top: 12px;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.access-button {
+  display: flex;
+  background-color: #9da1a5;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.4s ease;
+  margin-top: 10px;
+  font-weight: 500;
+  width: 45%;
+  justify-content: center;
+}
+
+.access-button:hover {
+  background-color: #828489;
+}
+.access-button img {
+  width: 20px;
+  margin-right: 10px;
+}
+.forgot-button {
+  display: flex;
+  justify-content: center;
+}
+
+.close-button {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+/* .close-button img.rot {
+  animation: 1s linear 0s normal none infinite running rot;
+} */
+
+.close-button img:hover {
+  transform: rotate(90deg);
+  transition: ease-in 0.8s;
+}
+.close-button img {
+  width: 35px;
+  transform: rotate(-90deg);
+  transition: ease-in 0.8s;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
 /*
 //////////////////////
 ////// ADAPTIVE //////

@@ -305,10 +305,10 @@ const renderCards = (rowId) => {
             </service-card>
           </div>
         </div>
-        <component-header title="Контакты" className="text-center"></component-header>
-        <contacts />
-        <ContactsLinks />
       </div>
+      <component-header title="Контакты" className="text-center"></component-header>
+      <contacts />
+      <ContactsLinks />
     </div>
   </div>
 </template>

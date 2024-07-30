@@ -7,9 +7,21 @@ const cart = ref([])
 
 const drawerOpen = ref(false)
 
+const profileModalOpen = ref(false)
+
 const totalPrice = computed(() => cart.value.reduce((acc, item) => acc + item.price, 0))
 
 const vatPrice = computed(() => Math.round((totalPrice.value * 5) / 100))
+
+const closeProfileModal = () => {
+  profileModalOpen.value = false
+}
+
+const openProfileModal = () => {
+  profileModalOpen.value = true
+
+  console.log(profileModalOpen.value)
+}
 
 const closeDrawer = () => {
   drawerOpen.value = false
@@ -17,7 +29,6 @@ const closeDrawer = () => {
 
 const openDrawer = () => {
   drawerOpen.value = true
-  console.log(drawerOpen.value)
 }
 
 const addToCart = (item) => {
@@ -38,11 +49,23 @@ watch(
   { deep: true }
 )
 
-provide('cart', { cart, closeDrawer, openDrawer, addToCart, removeFromCart })
+provide('cart', {
+  cart,
+  closeDrawer,
+  openDrawer,
+  addToCart,
+  removeFromCart
+})
+// provide('modal',
+//   { openProfileModal, closeProfileModal, profileModalOpen })
 </script>
 <template>
   <Drawer v-if="drawerOpen" :total-price="totalPrice" :vatPrice="vatPrice" />
-  <Header :total-price="totalPrice" @open-drawer="openDrawer"></Header>
+  <Header
+    :total-price="totalPrice"
+    @open-drawer="openDrawer"
+    @open-profile-modal="openProfileModal"
+  ></Header>
   <RouterView />
 </template>
 

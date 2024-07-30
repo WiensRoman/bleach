@@ -1,9 +1,13 @@
 <script setup>
+import ProfileModal from './ProfileModal.vue'
+import { ref } from 'vue'
 defineProps({
   totalPrice: Number
 })
 
-const emit = defineEmits(['openDrawer'])
+const openModal = ref(false)
+
+const emit = defineEmits(['openDrawer', 'openProfileModal'])
 </script>
 
 <template>
@@ -19,9 +23,17 @@ const emit = defineEmits(['openDrawer'])
       </li></RouterLink
     >
 
-    <li className="header-profile">
+    <li
+      @click="
+        () => {
+          openModal = true
+        }
+      "
+      className="header-profile"
+    >
       <img src="../assets/profile.svg" alt="Cart" />
       <span>Профиль</span>
     </li>
   </ul>
+  <ProfileModal v-if="openModal" :open-modal="openModal" />
 </template>

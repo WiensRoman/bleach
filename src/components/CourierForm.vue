@@ -7,7 +7,7 @@
     <div className="phone"><span>Телефон</span><input type="text" /></div>
     <div className="addres"><span>Адрес</span><input type="text" /></div>
     <div className="count"><span>Количество пар</span><input type="text" /></div>
-    <div className="email"><span>Email</span><input type="text" /></div>
+    <div className="email"><span>E-mail</span><input type="text" /></div>
     <button className="form-button">Отправить</button>
   </div>
 </template>
