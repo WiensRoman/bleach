@@ -946,8 +946,11 @@ p {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 40px;
+}
+
+.form-title span {
   background-image: linear-gradient(to right, #f6d19e 0, #f6d19e 100%);
-  background-size: 30% 28%;
+  background-size: 100% 28%;
   background-repeat: no-repeat;
   background-position: left 90%;
 }
@@ -1068,14 +1071,46 @@ p {
   align-content: center;
   justify-content: center;
   overflow: auto;
+  z-index: 20;
+  animation: ani 1s forwards;
+}
+.shadow {
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.form-register {
+  opacity: 0;
+  animation: ani 1s forwards;
+}
+
+.form-login {
+  animation: ani 1s forwards;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .modal-container {
   background-color: #ffff;
   padding: 20px 60px;
   width: 25%;
-  height: 50%;
+  height: auto;
   border-radius: 0.75rem;
   box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  z-index: 20;
 }
 .modal-container h2 {
   color: #000;
@@ -1171,18 +1206,19 @@ p {
 
 .access-button {
   display: flex;
-  background-color: #9da1a5;
+  background-color: #f1f1f1;
   border-radius: 10px;
   padding: 10px;
   transition: all 0.4s ease;
   margin-top: 10px;
-  font-weight: 500;
+  font-weight: 700;
   width: 45%;
   justify-content: center;
+  color: #000;
 }
 
 .access-button:hover {
-  background-color: #828489;
+  background-color: #d7d7d7;
 }
 .access-button img {
   width: 20px;
@@ -1210,6 +1246,16 @@ p {
   width: 35px;
   transform: rotate(-90deg);
   transition: ease-in 0.8s;
+}
+
+.error-message {
+  color: red !important;
+  font-weight: 500 !important;
+}
+
+.success-message span {
+  color: rgb(21, 176, 21) !important;
+  font-weight: 500 !important;
 }
 
 @keyframes rot {

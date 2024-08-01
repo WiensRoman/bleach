@@ -1,12 +1,11 @@
 <script setup>
 import ProfileModal from './ProfileModal.vue'
-import { ref } from 'vue'
+import { inject } from 'vue'
 defineProps({
   totalPrice: Number
 })
 
-const openModal = ref(false)
-
+const { profileModalOpen } = inject('modal')
 const emit = defineEmits(['openDrawer', 'openProfileModal'])
 </script>
 
@@ -23,17 +22,10 @@ const emit = defineEmits(['openDrawer', 'openProfileModal'])
       </li></RouterLink
     >
 
-    <li
-      @click="
-        () => {
-          openModal = true
-        }
-      "
-      className="header-profile"
-    >
+    <li @click="() => emit('openProfileModal')" className="header-profile">
       <img src="../assets/profile.svg" alt="Cart" />
       <span>Профиль</span>
     </li>
   </ul>
-  <ProfileModal v-if="openModal" :open-modal="openModal" />
+  <ProfileModal v-if="profileModalOpen" />
 </template>

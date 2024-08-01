@@ -56,8 +56,7 @@ provide('cart', {
   addToCart,
   removeFromCart
 })
-// provide('modal',
-//   { openProfileModal, closeProfileModal, profileModalOpen })
+provide('modal', { openProfileModal, closeProfileModal, profileModalOpen })
 </script>
 <template>
   <Drawer v-if="drawerOpen" :total-price="totalPrice" :vatPrice="vatPrice" />
