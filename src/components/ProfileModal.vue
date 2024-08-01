@@ -5,6 +5,7 @@ import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength, sameAs } from '@vuelidate/validators'
 
 const { closeProfileModal } = inject('modal')
+let { thisUserData } = inject('user')
 let loginForm = ref(true)
 let successMessage = false
 
@@ -67,25 +68,15 @@ const createUser = async () => {
 
 const getAccess = async () => {
   try {
-    const params = {
-      sortBy: filters.sortBy
-    }
-    if (filters.searchQuery) {
-      params.title = `*${filters.searchQuery}*`
+    const obj = {
+      email: formLoginData.email,
+      password: formLoginData.password
     }
 
-    const { data } = await axios.get('https://d8618ff445c5b9a8.mokky.dev/users', {
-      params
-    })
-    console.log(data)
-    // items.value = data.map((obj) => ({
-    //   ...obj,
-    //   isFavorite: false,
-    //   favoriteId: null,
-    //   isAdded: false
-    // }))
+    const res = await axios.post('https://d8618ff445c5b9a8.mokky.dev/auth', obj)
+    return res
   } catch (err) {
-    console.log(err)
+    return false
   }
 }
 
@@ -108,9 +99,14 @@ const submitRegistrationForm = async () => {
 const submitLoginForm = async () => {
   const result = await v$Login.value.$validate()
   if (result) {
-    getAccess
-    formLoginData.email = ''
-    formLoginData.password = ''
+    const access = await getAccess()
+    if (access) {
+      formLoginData.email = ''
+      formLoginData.password = ''
+      block()
+      closeProfileModal()
+      thisUserData.value = access.data.data
+    }
   }
 }
 

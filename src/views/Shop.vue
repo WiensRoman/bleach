@@ -2,6 +2,7 @@
 import axios from 'axios'
 import CardList from '@/components/CardList.vue'
 import { inject, reactive, watch, ref, onMounted } from 'vue'
+import debounce from 'lodash.debounce'
 
 const { cart, addToCart, removeFromCart } = inject('cart')
 
@@ -42,9 +43,13 @@ const onClickAddPlus = (item) => {
   console.log(item)
 }
 
-// const onChangeSelect = (event) => {
-//   filters.sortBy = event.target.value
-// }
+const onChangeSelect = (event) => {
+  filters.sortBy = event.target.value
+}
+
+const onChangeSearchInput = debounce((event) => {
+  filters.searchQuery = event.target.value
+}, 300)
 
 const fetchItems = async () => {
   try {
@@ -120,6 +125,28 @@ watch(filters, fetchItems)
 <template>
   <div className="shop-slide">
     <div className="shop-container">
+      <div className="shop-title">
+        <h3>МАГАЗИН WIENS BLEACH</h3>
+      </div>
+      <div className="shop-subtitle">
+        <p>У нас вы можете приобрести всё необходимое для чистки и ухода за обувью</p>
+      </div>
+      <div class="searcher-row flex gap-4">
+        <div class="relative">
+          <img class="absolute left-4 top-3" src="../assets/search.svg" />
+          <input
+            @input="onChangeSearchInput"
+            class="searcher border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
+            type="text"
+            placeholder="Поиск..."
+          />
+        </div>
+        <select @change="onChangeSelect" class="select py-2 px-3 border rounded-md outline-none">
+          <option value="name">По названию</option>
+          <option value="price">По цене (Дешевые)</option>
+          <option value="-price">По цене (Дорогие)</option>
+        </select>
+      </div>
       <CardList :items="items" @add-to-favorite="addToFavorite" @add-to-cart="onClickAddPlus" />
     </div>
   </div>

@@ -807,7 +807,7 @@ p {
 }
 
 .services-cards {
-  margin-top: 100px;
+  margin-top: 60px;
   max-width: 1116px;
 }
 .сol-lg-4 {
@@ -1053,6 +1053,43 @@ p {
 .shop-card .add {
   width: 15%;
 }
+.select {
+  color: #000;
+}
+
+.searcher-row {
+  justify-content: end;
+}
+
+.shop-title h3 {
+  color: #000;
+  font-size: 26px;
+  line-height: 32px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.shop-subtitle p {
+  color: #000;
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.shop-subtitle p span {
+  font-weight: 700;
+}
+
+.searcher {
+  color: #000;
+}
+
+.cards-grid {
+  margin-top: 20px;
+}
 
 /*
 ////////////////////////
@@ -1267,6 +1304,54 @@ p {
   }
 }
 
+/*
+//////////////////////
+// MY PROFILE MODAL //
+//////////////////////
+*/
+.my-profile-modal {
+  height: auto;
+  width: 340px;
+  position: absolute;
+  background-color: #ffff;
+  padding: 20px;
+  top: 70px;
+  right: 100px;
+  border-radius: 0.75rem;
+  box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.avatar {
+  width: 35%;
+  position: relative;
+  top: -20px;
+  margin: auto;
+}
+
+.my-profile-modal input {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 24px;
+  color: #555;
+  background-color: #f1f1f1;
+  transition: all 0.2s ease;
+}
+
+.my-profile-modal input:focus {
+  border-color: #f6d19e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+  outline: 0;
+}
+
+.my-profile-modal .modal-button-second {
+  color: rgb(214, 42, 42);
+}
 /*
 //////////////////////
 ////// ADAPTIVE //////

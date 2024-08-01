@@ -9,9 +9,21 @@ const drawerOpen = ref(false)
 
 const profileModalOpen = ref(false)
 
+const myProfileModalOpen = ref(false)
+
+let thisUserData = ref(null)
+
 const totalPrice = computed(() => cart.value.reduce((acc, item) => acc + item.price, 0))
 
 const vatPrice = computed(() => Math.round((totalPrice.value * 5) / 100))
+
+const closeMyProfileModal = () => {
+  myProfileModalOpen.value = false
+}
+
+const openMyProfileModal = () => {
+  myProfileModalOpen.value = true
+}
 
 const closeProfileModal = () => {
   profileModalOpen.value = false
@@ -57,6 +69,8 @@ provide('cart', {
   removeFromCart
 })
 provide('modal', { openProfileModal, closeProfileModal, profileModalOpen })
+
+provide('user', { openMyProfileModal, closeMyProfileModal, myProfileModalOpen, thisUserData })
 </script>
 <template>
   <Drawer v-if="drawerOpen" :total-price="totalPrice" :vatPrice="vatPrice" />
