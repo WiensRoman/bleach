@@ -4,7 +4,7 @@ import ComponentButton from '../components/ComponentButton.vue'
 import ComponentHeader from '../components/ComponentHeader.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
-import photo from '@/assets/component_1.png'
+import photo from '/assets/component_1.png'
 
 onMounted(async () => {
   AOS.init()
