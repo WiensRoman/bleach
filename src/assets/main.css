@@ -1,11 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*
-////////////////////////
-//////// COMMON ////////
-////////////////////////
-*/
+
 body {
   margin: 0;
   background-color: #fff;
