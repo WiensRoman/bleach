@@ -4,7 +4,7 @@ import FirstSlideLine from './FirstSlideLine.vue'
 
 <template>
   <div class="first-slide">
-    <img src="../../public/first_slide_image3.jpg" class="bg-cover min-w-full" />
+    <img src="../assets/first_slide_image3.jpg" class="bg-cover min-w-full" />
     <div class="fs-container">
       <div class="fs-title">
         <h2>
