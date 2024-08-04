@@ -9,11 +9,6 @@ let { thisUserData } = inject('user')
 let loginForm = ref(true)
 let successMessage = false
 
-const filters = reactive({
-  sortBy: 'title',
-  searchQuery: ''
-})
-
 const formRegistrationData = reactive({
   fullName: '',
   email: '',
