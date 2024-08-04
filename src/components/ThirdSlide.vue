@@ -23,7 +23,7 @@ let items = [
       'десятки тысяч пар обуви, сумок и изделий ',
       'прошли через наши руки.'
     ],
-    imageUrl: '/src/assets/component_1.png',
+    imageUrl: '../assets/component_1.png',
     rowType: 0
   },
   {
@@ -35,7 +35,7 @@ let items = [
       'вы присылаете нам и',
       'даём гарантию результата'
     ],
-    imageUrl: '/src/assets/component_10_7.png',
+    imageUrl: '../assets/component_10_7.png',
     rowType: 0
   },
   {
@@ -49,14 +49,14 @@ let items = [
       'по реставрации ваши любимые вещи пробудут с',
       'вами гораздо дольше!'
     ],
-    imageUrl: '/src/assets/component_3.png',
+    imageUrl: '../assets/component_3.png',
     rowType: 1
   },
   {
     id: 3,
     title: 'Бесплатная доставка в пределах МКАД',
     description: ['Наш курьер заберет ваши изделия', 'и доставит готовый заказ в удобное время'],
-    imageUrl: '/src/assets/component_10_7.png',
+    imageUrl: '../assets/component_10_7.png',
     rowType: 1
   }
 ]
