@@ -1,8 +1,8 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import GalleryHeader from '@/components/GalleryHeader.vue'
 import GalleryItem from '@/components/GalleryItem.vue'
-import axios from 'axios'
+// import axios from 'axios'
 import galleryImg0 from '../assets/gallery_0.png'
 import galleryImg1 from '../assets/gallery_1.png'
 import galleryImg2 from '../assets/gallery_2.png'
@@ -73,16 +73,16 @@ let items = [
 
 // let items = ref([])
 
-const fetchItems = async () => {
-  try {
-    const { data } = await axios.get('https://d8618ff445c5b9a8.mokky.dev/gallery', {})
-    items.value = data.map((obj) => ({
-      ...obj
-    }))
-  } catch (err) {
-    console.log(err)
-  }
-}
+// const fetchItems = async () => {
+//   try {
+//     const { data } = await axios.get('https://d8618ff445c5b9a8.mokky.dev/gallery', {})
+//     items.value = data.map((obj) => ({
+//       ...obj
+//     }))
+//   } catch (err) {
+//     console.log(err)
+//   }
+// }
 
 onMounted(async () => {
   // await fetchItems()

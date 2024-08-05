@@ -26,9 +26,6 @@ import serviceImg17 from '../assets/service_17.png'
 let filteredItems = []
 const rows = ref([])
 
-const imgUrl = (url) => {
-  return new URL(url, import.meta.url).href
-}
 // const rows = [
 //   {
 //     id: 0,
