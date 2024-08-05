@@ -4,6 +4,9 @@ import FifthSlideDescription from './FifthSlideDescription.vue'
 import FifthSlideCard from './FifthSlideCard.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
+import fifthSlideImg1 from '../assets/fifth_slide_01.png'
+import fifthSlideImg2 from '../assets/fifth_slide_02.png'
+import fifthSlideImg3 from '../assets/fifth_slide_03.png'
 
 onMounted(async () => {
   AOS.init()
@@ -21,7 +24,7 @@ const cardsArr = [
       'которые вы присылаете нам в соцсетях и дают',
       'комментарий по объёму работ и ожидаемому результату.'
     ],
-    imageUrl: 'src/assets/fifth_slide_01.png'
+    imageUrl: fifthSlideImg1
   },
   {
     id: 1,
@@ -33,7 +36,7 @@ const cardsArr = [
       'можете привезти её к нам самостоятельно в один из',
       'приёмных пунктов.'
     ],
-    imageUrl: 'src/assets/fifth_slide_02.png'
+    imageUrl: fifthSlideImg2
   },
   {
     id: 2,
@@ -43,7 +46,7 @@ const cardsArr = [
       'ремонтируем и отправляем с курьером обратно. Вы ',
       'также можете забрать заказ самостоятельно'
     ],
-    imageUrl: 'src/assets/fifth_slide_03.png'
+    imageUrl: fifthSlideImg3
   }
 ]
 </script>

@@ -5,9 +5,30 @@ import Contacts from '@/components/Contacts.vue'
 import ContactsLinks from '@/components/ContactsLinks.vue'
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
+import serviceImg1 from '../assets/service_1.png'
+import serviceImg2 from '../assets/service_2.png'
+import serviceImg3 from '../assets/service_3.png'
+import serviceImg4 from '../assets/service_4.png'
+import serviceImg5 from '../assets/service_5.png'
+import serviceImg6 from '../assets/service_6.png'
+import serviceImg7 from '../assets/service_7.png'
+import serviceImg8 from '../assets/service_8.png'
+import serviceImg9 from '../assets/service_9.png'
+import serviceImg10 from '../assets/service_10.png'
+import serviceImg11 from '../assets/service_11.png'
+import serviceImg12 from '../assets/service_12.png'
+import serviceImg13 from '../assets/service_13.png'
+import serviceImg14 from '../assets/service_14.png'
+import serviceImg15 from '../assets/service_15.png'
+import serviceImg16 from '../assets/service_16.png'
+import serviceImg17 from '../assets/service_17.png'
 
 let filteredItems = []
 const rows = ref([])
+
+const imgUrl = (url) => {
+  return new URL(url, import.meta.url).href
+}
 // const rows = [
 //   {
 //     id: 0,
@@ -30,7 +51,7 @@ const rows = ref([])
 const items = [
   {
     id: 0,
-    imageUrl: 'src/assets/service_1.png',
+    imageUrl: serviceImg1,
     title: 'Чистка обуви',
     price: 'от 3500 руб.',
     text: [
@@ -45,7 +66,7 @@ const items = [
   },
   {
     id: 1,
-    imageUrl: 'src/assets/service_2.png',
+    imageUrl: serviceImg2,
     title: 'Комплекс UGG',
     price: '5000 руб.',
     text: [
@@ -59,7 +80,7 @@ const items = [
   },
   {
     id: 2,
-    imageUrl: 'src/assets/service_3.png',
+    imageUrl: serviceImg3,
     title: 'Базовый уход для классической обуви',
     price: '3500 руб.',
     text: [
@@ -74,7 +95,7 @@ const items = [
   },
   {
     id: 3,
-    imageUrl: 'src/assets/service_4.png',
+    imageUrl: serviceImg4,
     title: 'Комплекс: чистка, покраска и реставрация обуви',
     price: 'от 6000 р.',
     text: [
@@ -93,7 +114,7 @@ const items = [
   },
   {
     id: 4,
-    imageUrl: 'src/assets/service_5.png',
+    imageUrl: serviceImg5,
     title: 'Реставрация каблуков и мысов',
     price: 'от 4000 р.',
     text: [
@@ -105,7 +126,7 @@ const items = [
   },
   {
     id: 5,
-    imageUrl: 'src/assets/service_6.png',
+    imageUrl: serviceImg6,
     title: 'Покраска куртки',
     price: 'от 12000 р.',
     text: [
@@ -119,7 +140,7 @@ const items = [
   },
   {
     id: 6,
-    imageUrl: 'src/assets/service_7.png',
+    imageUrl: serviceImg7,
     title: 'Профилактика для обуви',
     price: 'от 2000 р.',
     text: [
@@ -131,7 +152,7 @@ const items = [
   },
   {
     id: 7,
-    imageUrl: 'src/assets/service_8.png',
+    imageUrl: serviceImg8,
     title: 'Набойки для обуви',
     price: 'от 1 000 р.',
     text: [
@@ -143,7 +164,7 @@ const items = [
   },
   {
     id: 8,
-    imageUrl: 'src/assets/service_9.png',
+    imageUrl: serviceImg9,
     title: 'Ремонт задников, изготовление стелек',
     price: 'от 1 500 р.',
     text: [
@@ -157,7 +178,7 @@ const items = [
   },
   {
     id: 9,
-    imageUrl: 'src/assets/service_10.png',
+    imageUrl: serviceImg10,
     title: 'Замена подошвы Loro Piana',
     price: '12 000 р.',
     text: [
@@ -169,7 +190,7 @@ const items = [
   },
   {
     id: 10,
-    imageUrl: 'src/assets/service_11.png',
+    imageUrl: serviceImg11,
     title: 'Замена молнии на обуви',
     price: '2500 р.',
     text: [
@@ -182,7 +203,7 @@ const items = [
   },
   {
     id: 11,
-    imageUrl: 'src/assets/service_12.png',
+    imageUrl: serviceImg12,
     title: 'Чистка сумки',
     price: 'от 3000 р.',
     text: [
@@ -194,7 +215,7 @@ const items = [
   },
   {
     id: 12,
-    imageUrl: 'src/assets/service_13.png',
+    imageUrl: serviceImg13,
     title: 'Реставрация углов сумки',
     price: 'от 4000 р.',
     text: ['Реставрация 1-2 углов - 4000 руб.', 'Реставрация 3-4 углов - 5000 руб.'],
@@ -202,7 +223,7 @@ const items = [
   },
   {
     id: 13,
-    imageUrl: 'src/assets/service_14.png',
+    imageUrl: serviceImg14,
     title: 'Реставрация уреза',
     price: 'от 2000 р.',
     text: [
@@ -217,7 +238,7 @@ const items = [
   },
   {
     id: 14,
-    imageUrl: 'src/assets/service_15.png',
+    imageUrl: serviceImg15,
     title: 'Покраска сумки с подбором цвета',
     price: 'от 8000 р.',
     text: [
@@ -231,7 +252,7 @@ const items = [
   },
   {
     id: 15,
-    imageUrl: 'src/assets/service_16.png',
+    imageUrl: serviceImg16,
     title: 'Покраска клатча или кошелька',
     price: 'от 6 000 р.',
     text: [
@@ -244,7 +265,7 @@ const items = [
   },
   {
     id: 16,
-    imageUrl: 'src/assets/service_17.png',
+    imageUrl: serviceImg17,
     title: 'Ремонт сумок',
     price: 'от 2000 р.',
     text: [

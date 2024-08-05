@@ -4,7 +4,9 @@ import ComponentButton from '../components/ComponentButton.vue'
 import ComponentHeader from '../components/ComponentHeader.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
-import photo from '../assets/component_1.png'
+import component1 from '../assets/component_1.png'
+import component2 from '../assets/component_10_7.png'
+import component3 from '../assets/component_3.png'
 
 onMounted(async () => {
   AOS.init()
@@ -24,7 +26,7 @@ let items = [
       'десятки тысяч пар обуви, сумок и изделий ',
       'прошли через наши руки.'
     ],
-    imageUrl: photo,
+    imageUrl: component1,
     rowType: 0
   },
   {
@@ -36,7 +38,7 @@ let items = [
       'вы присылаете нам и',
       'даём гарантию результата'
     ],
-    imageUrl: '../assets/component_10_7.png',
+    imageUrl: component2,
     rowType: 0
   },
   {
@@ -50,14 +52,14 @@ let items = [
       'по реставрации ваши любимые вещи пробудут с',
       'вами гораздо дольше!'
     ],
-    imageUrl: '../assets/component_3.png',
+    imageUrl: component3,
     rowType: 1
   },
   {
     id: 3,
     title: 'Бесплатная доставка в пределах МКАД',
     description: ['Наш курьер заберет ваши изделия', 'и доставит готовый заказ в удобное время'],
-    imageUrl: '../assets/component_10_7.png',
+    imageUrl: component2,
     rowType: 1
   }
 ]
