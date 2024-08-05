@@ -4,9 +4,9 @@ import ComponentButton from '../components/ComponentButton.vue'
 import ComponentHeader from '../components/ComponentHeader.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
-import component1 from '../assets/component_1.png'
-import component2 from '../assets/component_10_7.png'
-import component3 from '../assets/component_3.png'
+import component1 from './component_1.png'
+import component2 from './component_10_7.png'
+import component3 from './component_3.png'
 
 onMounted(async () => {
   AOS.init()

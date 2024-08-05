@@ -15,7 +15,7 @@ defineProps({
     <div class="ts-card-text">
       <p v-for="dscr in descriptionArr" :key="dscr.index">{{ dscr }}</p>
     </div>
-    <div v-if="id == 1" className="ts-image"><img src="../assets/component_2.png" /></div>
+    <div v-if="id == 1" className="ts-image"><img src="./component_2.png" /></div>
     <div v-else-if="id == 3" className="ts-image-dostavka">
       <img src="../assets/dostavka.png" />
     </div>
