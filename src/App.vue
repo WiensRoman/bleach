@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch, provide, computed } from 'vue'
-import Header from './components/Header.vue'
-import Drawer from './components/Drawer.vue'
+import Header from '@/modules/header/components/Header.vue'
+import Drawer from '@/modules/drawer/components/Drawer.vue'
 
 const cart = ref([])
 
