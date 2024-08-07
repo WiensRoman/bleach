@@ -10,6 +10,7 @@ const { cart, removeFromCart } = inject('cart')
     <DrawerCard
       v-for="item in cart"
       :key="item.id"
+      :id="item.id"
       :title="item.title"
       :price="item.price"
       :image-url="item.imageUrl"

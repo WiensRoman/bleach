@@ -4,6 +4,8 @@ import DrawerHead from './DrawerHead.vue'
 import DrawerCardList from './DrawerCardList.vue'
 import DrawerInfoBlock from './DrawerInfoBlock.vue'
 import axios from 'axios'
+import packageIcon from '../../../assets/images/package-icon.png'
+import orderSuccessIcon from '../../..//assets/images/order-success-icon.png'
 
 const props = defineProps({
   totalPrice: Number,
@@ -47,14 +49,14 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
         v-if="!totalPrice && !orderId"
         title="Корзина пустая"
         description="Добавьте хотя бы один товар, чтобы сделать заказ."
-        image-url="src/assets/images/package-icon.png"
+        :image-url="packageIcon"
       />
 
       <DrawerInfoBlock
         v-if="orderId"
         title="Заказ оформлен!"
         :description="`Ваш заказ №${orderId} скоро будет передан курьерской доставке`"
-        image-url="src/assets/images/order-success-icon.png"
+        :image-url="orderSuccessIcon"
       />
     </div>
 

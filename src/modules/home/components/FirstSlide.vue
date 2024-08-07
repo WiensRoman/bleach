@@ -1,12 +1,10 @@
 <script setup>
 import FirstSlideLine from './FirstSlideLine.vue'
+import img from '@/assets/images/first_slide_image3.jpg'
 </script>
 
 <template>
-  <div
-    class="first-slide"
-    style="background-image: url('src/assets/images/first_slide_image3.jpg')"
-  >
+  <div class="first-slide" :style="{ backgroundImage: 'url(' + img + ')' }">
     <div class="fs-container">
       <div class="fs-title">
         <h2>
