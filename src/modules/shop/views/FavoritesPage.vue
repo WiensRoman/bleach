@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
-import CardList from '../components/CardList.vue'
+import ShopCardList from '../components/ShopCardList.vue'
 const favorites = ref([])
 
 onMounted(async () => {
@@ -20,6 +20,6 @@ onMounted(async () => {
 <template>
   <div className="favorites-container">
     <h1 class="favorites-title text-3xl font-bold mb-8">Мои закладки</h1>
-    <CardList :items="favorites" is-favorites />
+    <ShopCardList :items="favorites" is-favorites />
   </div>
 </template>

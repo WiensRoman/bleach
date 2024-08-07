@@ -1,13 +1,13 @@
 <script setup>
 import { ref, watch, provide, computed } from 'vue'
 import Header from '@/modules/header/components/Header.vue'
-import Drawer from '@/modules/drawer/components/Drawer.vue'
+import DrawerBase from '@/modules/drawer/components/DrawerBase.vue'
 
 const cart = ref([])
 
 const drawerOpen = ref(false)
 
-const profileModalOpen = ref(false)
+const LoginRegistrationModalOpen = ref(false)
 
 const myProfileModalOpen = ref(false)
 
@@ -25,14 +25,14 @@ const openMyProfileModal = () => {
   myProfileModalOpen.value = true
 }
 
-const closeProfileModal = () => {
-  profileModalOpen.value = false
+const closeLoginRegistrationModal = () => {
+  LoginRegistrationModalOpen.value = false
 }
 
-const openProfileModal = () => {
-  profileModalOpen.value = true
+const openLoginRegistrationModal = () => {
+  LoginRegistrationModalOpen.value = true
 
-  console.log(profileModalOpen.value)
+  console.log(LoginRegistrationModalOpen.value)
 }
 
 const closeDrawer = () => {
@@ -68,16 +68,20 @@ provide('cart', {
   addToCart,
   removeFromCart
 })
-provide('modal', { openProfileModal, closeProfileModal, profileModalOpen })
+provide('modal', {
+  openLoginRegistrationModal,
+  closeLoginRegistrationModal,
+  LoginRegistrationModalOpen
+})
 
 provide('user', { openMyProfileModal, closeMyProfileModal, myProfileModalOpen, thisUserData })
 </script>
 <template>
-  <Drawer v-if="drawerOpen" :total-price="totalPrice" :vatPrice="vatPrice" />
+  <DrawerBase v-if="drawerOpen" :total-price="totalPrice" :vatPrice="vatPrice" />
   <Header
     :total-price="totalPrice"
     @open-drawer="openDrawer"
-    @open-profile-modal="openProfileModal"
+    @open-login-registration-modal="openLoginRegistrationModal"
   ></Header>
   <RouterView />
 </template>

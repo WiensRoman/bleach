@@ -1,6 +1,6 @@
 <script setup>
 import axios from 'axios'
-import CardList from '../components/CardList.vue'
+import ShopCardList from '../components/ShopCardList.vue'
 import { inject, reactive, watch, ref, onMounted } from 'vue'
 import debounce from 'lodash.debounce'
 
@@ -147,7 +147,7 @@ watch(filters, fetchItems)
           <option value="-price">По цене (Дорогие)</option>
         </select>
       </div>
-      <CardList :items="items" @add-to-favorite="addToFavorite" @add-to-cart="onClickAddPlus" />
+      <ShopCardList :items="items" @add-to-favorite="addToFavorite" @add-to-cart="onClickAddPlus" />
     </div>
   </div>
 </template>

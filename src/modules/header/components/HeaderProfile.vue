@@ -1,14 +1,14 @@
 <script setup>
-import ProfileModal from './ProfileModal.vue'
+import LoginRegistrationModal from './LoginRegistrationModal.vue'
 import MyProfileModal from './MyProfileModal.vue'
 import { inject } from 'vue'
 defineProps({
   totalPrice: Number
 })
 const { thisUserData } = inject('user')
-const { profileModalOpen } = inject('modal')
+const { LoginRegistrationModalOpen } = inject('modal')
 const { myProfileModalOpen } = inject('user')
-const emit = defineEmits(['openDrawer', 'openProfileModal', 'openMyProfileModal'])
+const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal', 'openMyProfileModal'])
 </script>
 
 <template>
@@ -24,7 +24,11 @@ const emit = defineEmits(['openDrawer', 'openProfileModal', 'openMyProfileModal'
       </li></RouterLink
     >
 
-    <li v-if="!thisUserData" @click="() => emit('openProfileModal')" className="header-profile">
+    <li
+      v-if="!thisUserData"
+      @click="() => emit('openLoginRegistrationModal')"
+      className="header-profile"
+    >
       <img src="../../../assets/icons/profile.svg" alt="Cart" />
       <span>Профиль</span>
     </li>
@@ -34,5 +38,5 @@ const emit = defineEmits(['openDrawer', 'openProfileModal', 'openMyProfileModal'
     </li>
   </ul>
   <MyProfileModal v-if="myProfileModalOpen" />
-  <ProfileModal v-if="profileModalOpen" />
+  <LoginRegistrationModal v-if="LoginRegistrationModalOpen" />
 </template>

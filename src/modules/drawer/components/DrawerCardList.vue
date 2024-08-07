@@ -1,13 +1,13 @@
 <script setup>
 import { inject } from 'vue'
-import CartItem from './CartItem.vue'
+import DrawerCard from './DrawerCard.vue'
 
 const { cart, removeFromCart } = inject('cart')
 </script>
 
 <template>
   <div class="drawer-item-description flex flex-col flex-1 gap-4 justify-between" v-auto-animate>
-    <CartItem
+    <DrawerCard
       v-for="item in cart"
       :key="item.id"
       :title="item.title"

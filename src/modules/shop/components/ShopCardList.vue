@@ -1,5 +1,5 @@
 <script setup>
-import Card from './Card.vue'
+import ShopCard from './ShopCard.vue'
 
 defineProps({
   items: Array,
@@ -11,7 +11,7 @@ const emit = defineEmits(['addToFavorite', 'addToCart'])
 
 <template>
   <div class="cards-grid grid grid-cols-4 gap-5" v-auto-animate>
-    <Card
+    <ShopCard
       v-for="item in items"
       :key="item.id"
       :id="item.id"

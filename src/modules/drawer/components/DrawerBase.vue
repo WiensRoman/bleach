@@ -1,8 +1,8 @@
 <script setup>
 import { ref, computed, inject } from 'vue'
 import DrawerHead from './DrawerHead.vue'
-import CartItemList from './CartItemList.vue'
-import InfoBlock from './InfoBlock.vue'
+import DrawerCardList from './DrawerCardList.vue'
+import DrawerInfoBlock from './DrawerInfoBlock.vue'
 import axios from 'axios'
 
 const props = defineProps({
@@ -43,14 +43,14 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
     <DrawerHead />
 
     <div v-if="!totalPrice || orderId" class="flex h-full items-center">
-      <InfoBlock
+      <DrawerInfoBlock
         v-if="!totalPrice && !orderId"
         title="Корзина пустая"
         description="Добавьте хотя бы один товар, чтобы сделать заказ."
         image-url="src/assets/images/package-icon.png"
       />
 
-      <InfoBlock
+      <DrawerInfoBlock
         v-if="orderId"
         title="Заказ оформлен!"
         :description="`Ваш заказ №${orderId} скоро будет передан курьерской доставке`"
@@ -59,7 +59,7 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
     </div>
 
     <div v-else>
-      <CartItemList />
+      <DrawerCardList />
 
       <div v-if="totalPrice" class="flex flex-col gap-4 mt-7">
         <div class="flex gap-2">

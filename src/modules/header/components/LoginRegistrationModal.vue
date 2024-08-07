@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength, sameAs } from '@vuelidate/validators'
 
-const { closeProfileModal } = inject('modal')
+const { closeLoginRegistrationModal } = inject('modal')
 let { thisUserData } = inject('user')
 let loginForm = ref(true)
 let successMessage = false
@@ -99,7 +99,7 @@ const submitLoginForm = async () => {
       formLoginData.email = ''
       formLoginData.password = ''
       block()
-      closeProfileModal()
+      closeLoginRegistrationModal()
       thisUserData.value = access.data.data
     }
   }
@@ -115,7 +115,7 @@ const block = () => {
     ><div className="shadow"></div>
     <div className="profile-modal">
       <div className="modal-container">
-        <div className="close-button" @click="closeProfileModal">
+        <div className="close-button" @click="closeLoginRegistrationModal">
           <img src="../../../assets/icons/icons8-cross-50.png" />
         </div>
         <div className="form-login" v-if="loginForm">

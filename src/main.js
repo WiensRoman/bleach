@@ -6,12 +6,12 @@ import PrimeVue from 'primevue/config'
 import { createRouter, createWebHistory } from 'vue-router'
 import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import 'aos/dist/aos.css'
-import Home from './modules/home/views/Home.vue'
+import HomePage from './modules/home/views/HomePage.vue'
 import ServicesPage from './modules/services/views/ServicesPage.vue'
-import Gallery from './modules/gallery/views/Gallery.vue'
-import Shop from './modules/shop/views/Shop.vue'
-import Courier from './modules/courier/views/Courier.vue'
-import Favorites from './modules/shop/views/Favorites.vue'
+import GalleryPage from './modules/gallery/views/GalleryPage.vue'
+import ShopPage from './modules/shop/views/ShopPage.vue'
+import CourierPage from './modules/courier/views/CourierPage.vue'
+import FavoritesPage from './modules/shop/views/FavoritesPage.vue'
 
 const app = createApp(App)
 // app.component('font-awesome-icon', FontAwesomeIcon)
@@ -20,12 +20,12 @@ app.use(PrimeVue, {
 })
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
+  { path: '/', name: 'Home', component: HomePage },
   { path: '/services', name: 'Services', component: ServicesPage },
-  { path: '/gallery', name: 'Gallery', component: Gallery },
-  { path: '/shop', name: 'Shop', component: Shop },
-  { path: '/courier', name: 'Courier', component: Courier },
-  { path: '/favorites', name: 'Favorites', component: Favorites }
+  { path: '/gallery', name: 'Gallery', component: GalleryPage },
+  { path: '/shop', name: 'Shop', component: ShopPage },
+  { path: '/courier', name: 'Courier', component: CourierPage },
+  { path: '/favorites', name: 'Favorites', component: FavoritesPage }
 ]
 
 const router = createRouter({
