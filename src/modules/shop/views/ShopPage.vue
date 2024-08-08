@@ -129,17 +129,12 @@ watch(filters, fetchItems)
       <div className="shop-subtitle">
         <p>У нас вы можете приобрести всё необходимое для чистки и ухода за обувью</p>
       </div>
-      <div class="searcher-row flex gap-4">
-        <div class="relative">
-          <img class="absolute left-4 top-3" src="@/assets/icons/search.svg" />
-          <input
-            @input="onChangeSearchInput"
-            class="searcher border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
-            type="text"
-            placeholder="Поиск..."
-          />
+      <div class="searcher-row">
+        <div class="searcher-wrapper">
+          <img class="search-icon" src="@/assets/icons/search.svg" />
+          <input @input="onChangeSearchInput" class="searcher" type="text" placeholder="Поиск..." />
         </div>
-        <select @change="onChangeSelect" class="select py-2 px-3 border rounded-md outline-none">
+        <select @change="onChangeSelect" class="select">
           <option value="name">По названию</option>
           <option value="price">По цене (Дешевые)</option>
           <option value="-price">По цене (Дорогие)</option>

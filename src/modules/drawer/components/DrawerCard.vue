@@ -36,17 +36,17 @@ const arr = [
 </script>
 
 <template>
-  <div class="flex items-center border border-slate-200 p-4 rounded-xl gap-4">
-    <img class="w-16 h-16" :src="arr[id]" :alt="title" />
+  <div class="drawer-card">
+    <img class="drawer-card__image" :src="arr[id]" :alt="title" />
 
-    <div class="flex flex-col">
+    <div class="drawer-card__title">
       <p>{{ title }}</p>
 
-      <div class="flex justify-between mt-2">
-        <b class="flex-1">{{ price }} руб.</b>
+      <div class="drawer-card__price">
+        <b>{{ price }} руб.</b>
         <img
           @click="emit('onClickRemove')"
-          class="opacity-40 hover:opacity-100 cursor-pointer transition"
+          class="drawer-card__remove hover:opacity-100 transition"
           :src="closeIcon"
         />
       </div>

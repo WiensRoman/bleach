@@ -43,14 +43,12 @@ const arr = [
 </script>
 
 <template>
-  <div
-    class="shop-card relative bg-white border border-slate-100 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
-  >
+  <div class="shop-card transition hover:-translate-y-2 hover:shadow-xl">
     <img
       v-if="visibleFavoriteButton"
       :src="!isFavorite ? like1Icon : like2Icon"
       alt="Like 1"
-      class="like absolute top-8 left-8"
+      class="like"
       @click="onClickFavorite"
     />
 
@@ -58,9 +56,9 @@ const arr = [
 
     <p class="mt-2">{{ title }}</p>
 
-    <div class="flex justify-between mt-5">
-      <div class="flex flex-col">
-        <span class="text-slate-400">Цена:</span>
+    <div class="shop-card__bottom">
+      <div class="shop-card__price">
+        <span class="shop-card__price__title">Цена:</span>
         <b>{{ price }} руб.</b>
       </div>
 
