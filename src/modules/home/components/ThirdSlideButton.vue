@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div className="w-full flex h-1/5">
-    <a href="https://wa.me//79255163317" className="ts-card-button"><p>Рассчитать стоимость</p></a>
+  <div class="w-full flex h-1/5">
+    <a href="https://wa.me//79255163317" class="ts-card-button"><p>РАССЧИТАТЬ СТОИМОСТЬ</p></a>
   </div>
 </template>

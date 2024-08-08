@@ -4,9 +4,9 @@ import CourierDescription from '../components/CourierDescription.vue'
 </script>
 
 <template>
-  <div className="courier-slide">
-    <div className="courier-container">
-      <div className="courier-row">
+  <div class="courier-slide">
+    <div class="courier-container">
+      <div class="courier-row">
         <CourierForm />
         <CourierDescription />
       </div>

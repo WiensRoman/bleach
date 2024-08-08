@@ -154,9 +154,10 @@ h2 {
   display: flex;
   background-color: #f6d19e;
   border-radius: 13px;
-  padding: 25px 50px;
+  padding: 25px 30px;
   transition: all 0.4s ease;
   border-bottom: 2.5px #e6ae6d solid;
+  justify-content: center;
 }
 .fs-line_second_button:hover {
   background-color: #b99f78;
@@ -295,6 +296,11 @@ h2 {
 .carousel-control-prev {
   left: 0;
 }
+
+.s-button-next:hover,
+.s-button-prev:hover {
+  background-color: #d2d2d2;
+}
 .second-slide .container-fluid {
   display: flex;
   justify-content: center;
@@ -385,7 +391,7 @@ h2 {
   align-items: center;
   background-color: #f6d19e;
   border-radius: 13px;
-  padding: 25px 45px;
+  padding: 25px 30px;
   transition: all 0.4s ease;
   width: 280px;
   margin-left: auto;
@@ -521,6 +527,11 @@ h2 {
   font-size: 14px;
   margin-top: 15px;
   transition: all 0.4s ease;
+}
+
+.fourth-slide-card-button:hover {
+  background-color: #dac19b;
+  border: 1px #6b593f solid;
 }
 /*
 ////////////////////////
@@ -802,6 +813,15 @@ p {
 .services-title h2 {
   color: #000;
   font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.services-title {
+  color: #000;
+  font-size: 26px;
+  line-height: 32px;
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
   text-align: center;
 }
@@ -1174,13 +1194,25 @@ p {
 //////////////////////
 */
 .favorites-container {
-  padding: 160px 220px;
+  padding: 120px 220px;
   padding-bottom: 40px;
 }
 
 .favorites-title {
   color: #000;
+  font-size: 26px;
+  line-height: 32px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
   text-align: center;
+}
+
+.favorites-container .cards-grid {
+  display: grid;
+  position: relative;
+  margin-top: 100px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 /*
 //////////////////////
@@ -1189,7 +1221,7 @@ p {
 */
 
 .shop-container {
-  padding: 160px 220px;
+  padding: 120px 220px;
   padding-bottom: 40px;
 }
 
@@ -1529,7 +1561,7 @@ p {
   position: absolute;
   background-color: #ffff;
   padding: 20px;
-  top: 70px;
+  top: 80px;
   right: 100px;
   border-radius: 0.75rem;
   box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);

@@ -17,7 +17,7 @@ onMounted(async () => {
       <ComponentHeader title="НАШИ РАБОТЫ ДО/ПОСЛЕ" />
       <SecondSlideCarousel />
       <SecondSlideText />
-      <RouterLink to="/gallery"><ComponentButton title="Посмотреть" /></RouterLink>
+      <RouterLink to="/gallery"><ComponentButton title="ПОСМОТРЕТЬ" /></RouterLink>
     </div>
   </div>
 </template>

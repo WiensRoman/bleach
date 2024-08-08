@@ -26,25 +26,6 @@ import serviceImg17 from '../../../assets/images/service_17.png'
 let filteredItems = []
 const rows = ref([])
 
-// const rows = [
-//   {
-//     id: 0,
-//     title: 'Чистка обуви'
-//   },
-//   {
-//     id: 1,
-//     title: 'Реставрация обуви и курток'
-//   },
-//   {
-//     id: 2,
-//     title: 'Ремонт обуви'
-//   },
-//   {
-//     id: 3,
-//     title: 'Чистка и реставрация сумок'
-//   }
-// ]
-
 const items = [
   {
     id: 0,
@@ -299,14 +280,14 @@ const renderCards = (rowId) => {
 </script>
 
 <template>
-  <div className="services">
+  <div class="services">
     <div class="container-fluid">
-      <ComponentHeader title="НАШИ УСЛУГИ" className="text-center services-title"></ComponentHeader>
-      <div className="services-cards">
-        <div className="services-cards-title" v-for="row in rows" :key="row.id">
+      <h3 class="services-title">НАШИ УСЛУГИ</h3>
+      <div class="services-cards">
+        <div class="services-cards-title" v-for="row in rows" :key="row.id">
           <h3>{{ row.title }}</h3>
 
-          <div className="row">
+          <div class="row">
             {{ renderCards(row.id) }}
             <ServiceCard
               v-for="item in filteredItems"
@@ -321,7 +302,7 @@ const renderCards = (rowId) => {
           </div>
         </div>
       </div>
-      <ComponentHeader title="Контакты" className="text-center"></ComponentHeader>
+      <ComponentHeader title="Контакты" class="text-center"></ComponentHeader>
       <Contacts />
       <ContactsLinks />
     </div>

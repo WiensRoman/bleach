@@ -6,5 +6,5 @@ defineProps({
 </script>
 
 <template>
-  <div className="sixth-slide-review-left-img"><img :src="imageUrl" /></div>
+  <div class="sixth-slide-review-left-img"><img :src="imageUrl" /></div>
 </template>

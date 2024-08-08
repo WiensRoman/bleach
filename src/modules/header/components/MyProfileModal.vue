@@ -62,37 +62,34 @@ const exit = () => {
 </script>
 
 <template>
-  <div className="my-profile-modal">
-    <div className="close-button" @click="closeMyProfileModal">
+  <div class="my-profile-modal">
+    <div class="close-button" @click="closeMyProfileModal">
       <img src="../../../assets/icons/icons8-cross-50.png" />
     </div>
-    <div className="avatar"><img src="../../../assets/images/avatar1.png" /></div>
+    <div class="avatar"><img src="../../../assets/images/avatar1.png" /></div>
 
-    <div className="full-name">
-      <span className="modal-field-title">Full name</span>
+    <div class="full-name">
+      <span class="modal-field-title">Full name</span>
       <input type="text" v-model="formUpdateData.fullnameField" />
-      <div v-if="!blockErrorMessages" className="error-message-wrapper">
-        <span
-          className="error-message"
-          v-for="error in v$.fullnameField.$errors"
-          :key="error.$uid"
-          >{{ error.$message }}</span
-        >
+      <div v-if="!blockErrorMessages" class="error-message-wrapper">
+        <span class="error-message" v-for="error in v$.fullnameField.$errors" :key="error.$uid">{{
+          error.$message
+        }}</span>
       </div>
     </div>
-    <div className="email">
-      <span className="modal-field-title">E-mail</span>
+    <div class="email">
+      <span class="modal-field-title">E-mail</span>
       <input type="text" v-model="formUpdateData.emailField" />
       <div v-if="!blockErrorMessages">
-        <span className="error-message" v-for="error in v$.emailField.$errors" :key="error.$uid">{{
+        <span class="error-message" v-for="error in v$.emailField.$errors" :key="error.$uid">{{
           error.$message
         }}</span>
       </div>
     </div>
 
-    <div className="buttons-row">
-      <button className="modal-button" @click="submitForm">Сохранить</button
-      ><button className="modal-button-second" @click="exit">Выйти</button>
+    <div class="buttons-row">
+      <button class="modal-button" @click="submitForm">Сохранить</button
+      ><button class="modal-button-second" @click="exit">Выйти</button>
     </div>
   </div>
 </template>

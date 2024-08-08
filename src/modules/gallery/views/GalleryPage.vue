@@ -90,10 +90,10 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div className="gallery-slide">
-    <div className="container-fluid">
+  <div class="gallery-slide">
+    <div class="container-fluid">
       <GalleryHeader />
-      <div className="gallery">
+      <div class="gallery">
         <GalleryItem
           v-for="item in items"
           :key="item.index"

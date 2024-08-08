@@ -17,8 +17,8 @@ const reviewsLeftArr = [
 </script>
 
 <template>
-  <div className="sixth-slide-reviews flex">
-    <div className="sixth-slide-review-left">
+  <div class="sixth-slide-reviews flex">
+    <div class="sixth-slide-review-left">
       <SixthSlideReviewsLeft
         v-for="review in reviewsLeftArr"
         :key="review.id"

@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <div className="header-icon">
+    <div class="header-icon">
       <a href="https://www.instagram.com/romanwiens"
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path
@@ -10,7 +10,7 @@
           /></svg
       ></a>
     </div>
-    <div className="header-icon">
+    <div class="header-icon">
       <a href="https://wa.me//79255163317"
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path
@@ -18,7 +18,7 @@
           /></svg
       ></a>
     </div>
-    <div className="header-icon" style="margin-top: 27%">
+    <div class="header-icon" style="margin-top: 27%">
       <a href="https://t.me/Wiensus"
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
           <path

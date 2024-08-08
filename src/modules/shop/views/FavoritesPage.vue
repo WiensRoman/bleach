@@ -18,8 +18,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div className="favorites-container">
-    <h1 class="favorites-title text-3xl font-bold mb-8">Мои закладки</h1>
+  <div class="favorites-container">
+    <h3 class="favorites-title text-3xl font-bold mb-8">МОИ ЗАКЛАДКИ</h3>
     <ShopCardList :items="favorites" is-favorites />
   </div>
 </template>

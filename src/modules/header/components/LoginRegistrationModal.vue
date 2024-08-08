@@ -112,89 +112,86 @@ const block = () => {
 
 <template>
   <Teleport to="body"
-    ><div className="shadow"></div>
-    <div className="profile-modal">
-      <div className="modal-container">
-        <div className="close-button" @click="closeLoginRegistrationModal">
+    ><div class="shadow"></div>
+    <div class="profile-modal">
+      <div class="modal-container">
+        <div class="close-button" @click="closeLoginRegistrationModal">
           <img src="../../../assets/icons/icons8-cross-50.png" />
         </div>
-        <div className="form-login" v-if="loginForm">
-          <div className="modal-title"><h2>Login</h2></div>
-          <div className="fields-block">
-            <div className="email">
-              <span className="modal-field-title">E-mail</span
+        <div class="form-login" v-if="loginForm">
+          <div class="modal-title"><h2>Login</h2></div>
+          <div class="fields-block">
+            <div class="email">
+              <span class="modal-field-title">E-mail</span
               ><input type="text" v-model="formLoginData.email" />
               <span
-                className="error-message"
+                class="error-message"
                 v-for="error in v$Login.email.$errors"
                 :key="error.$uid"
                 >{{ error.$message }}</span
               >
             </div>
-            <div className="password">
-              <span className="modal-field-title">Password</span
+            <div class="password">
+              <span class="modal-field-title">Password</span
               ><input type="password" v-model="formLoginData.password" />
               <span
-                className="error-message"
+                class="error-message"
                 v-for="error in v$Login.password.$errors"
                 :key="error.$uid"
                 >{{ error.$message }}</span
               >
             </div>
           </div>
-          <div className="buttons-row">
-            <button className="modal-button" @click="submitLoginForm">Login</button
-            ><button className="modal-button-second" @click="loginForm = !loginForm">
+          <div class="buttons-row">
+            <button class="modal-button" @click="submitLoginForm">Login</button
+            ><button class="modal-button-second" @click="loginForm = !loginForm">
               Registration
             </button>
           </div>
         </div>
 
-        <div className="form-register" v-else>
-          <div className="modal-title"><h2>Registration</h2></div>
-          <div className="fields-block">
-            <div className="fio">
-              <span className="modal-field-title">Full name</span
+        <div class="form-register" v-else>
+          <div class="modal-title"><h2>Registration</h2></div>
+          <div class="fields-block">
+            <div class="fio">
+              <span class="modal-field-title">Full name</span
               ><input type="text" v-model="formRegistrationData.fullName" />
               <div v-if="!blockErrorMessages">
                 <span
-                  className="error-message"
+                  class="error-message"
                   v-for="error in v$.fullName.$errors"
                   :key="error.$uid"
                   >{{ error.$message }}</span
                 >
               </div>
             </div>
-            <div className="email">
-              <span className="modal-field-title">E-mail</span
+            <div class="email">
+              <span class="modal-field-title">E-mail</span
               ><input type="text" v-model="formRegistrationData.email" />
               <div v-if="!blockErrorMessages">
-                <span
-                  className="error-message"
-                  v-for="error in v$.email.$errors"
-                  :key="error.$uid"
-                  >{{ error.$message }}</span
-                >
+                <span class="error-message" v-for="error in v$.email.$errors" :key="error.$uid">{{
+                  error.$message
+                }}</span>
               </div>
             </div>
-            <div className="password">
-              <span className="modal-field-title">Password</span
+            <div class="password">
+              <span class="modal-field-title">Password</span
               ><input type="password" v-model="formRegistrationData.password.password" />
               <div v-if="!blockErrorMessages">
                 <span
-                  className="error-message"
+                  class="error-message"
                   v-for="error in v$.password.password.$errors"
                   :key="error.$uid"
                   >{{ error.$message }}</span
                 >
               </div>
             </div>
-            <div className="password">
-              <span className="modal-field-title">Repeat password</span
+            <div class="password">
+              <span class="modal-field-title">Repeat password</span
               ><input type="password" v-model="formRegistrationData.password.confirm" />
               <div v-if="!blockErrorMessages">
                 <span
-                  className="error-message"
+                  class="error-message"
                   v-for="error in v$.password.confirm.$errors"
                   :key="error.$uid"
                   >{{ error.$message }}</span
@@ -202,27 +199,27 @@ const block = () => {
               </div>
             </div>
           </div>
-          <div className="buttons-row">
-            <button className="modal-button" @click="submitRegistrationForm">Register</button
-            ><button className="modal-button-second" @click="loginForm = !loginForm">Login</button>
+          <div class="buttons-row">
+            <button class="modal-button" @click="submitRegistrationForm">Register</button
+            ><button class="modal-button-second" @click="loginForm = !loginForm">Login</button>
           </div>
-          <div className="success-message" v-if="successMessage"><span>Успешно!</span></div>
+          <div class="success-message" v-if="successMessage"><span>Успешно!</span></div>
         </div>
 
-        <div className="form-border">
-          <span className="form-border-undertitle">Sign in with</span>
+        <div class="form-border">
+          <span class="form-border-undertitle">Sign in with</span>
         </div>
-        <div className="buttons-row">
-          <button className="access-button">
+        <div class="buttons-row">
+          <button class="access-button">
             <img src="../../../assets/icons/x-twitter-brands-solid.svg" />
             <p>X-twitter</p></button
-          ><button className="access-button">
+          ><button class="access-button">
             <img src="../../../assets/icons/icons8-google.svg" />
             <p>Google</p>
           </button>
         </div>
-        <div className="forgot-button">
-          <button className="modal-button-second">Forgot password</button>
+        <div class="forgot-button">
+          <button class="modal-button-second">Forgot password</button>
         </div>
       </div>
     </div></Teleport

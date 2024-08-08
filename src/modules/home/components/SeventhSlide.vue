@@ -10,8 +10,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div data-aos="fade-down" className="seventh-slide">
-    <div className="container-fluid flex">
+  <div data-aos="fade-down" class="seventh-slide">
+    <div class="container-fluid flex">
       <div class="seventh-slide-header">
         <h1>КОНТАКТЫ</h1>
       </div>

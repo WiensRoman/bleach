@@ -12,7 +12,7 @@ const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal'])
 <template>
   <div class="border-spacing-3 justify-between border-b border-slate-200 px-10 header">
     <div class="flex">
-      <div className="header-logo">
+      <div class="header-logo">
         <RouterLink to="/"
           ><img src="/src/assets/images/logo.png" alt="Logo" class="w-40 logo"
         /></RouterLink>

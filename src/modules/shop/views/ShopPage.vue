@@ -121,12 +121,12 @@ watch(filters, fetchItems)
 </script>
 
 <template>
-  <div className="shop-slide">
-    <div className="shop-container">
-      <div className="shop-title">
+  <div class="shop-slide">
+    <div class="shop-container">
+      <div class="shop-title">
         <h3>МАГАЗИН WIENS BLEACH</h3>
       </div>
-      <div className="shop-subtitle">
+      <div class="shop-subtitle">
         <p>У нас вы можете приобрести всё необходимое для чистки и ухода за обувью</p>
       </div>
       <div class="searcher-row">

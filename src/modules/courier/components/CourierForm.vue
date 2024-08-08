@@ -42,51 +42,48 @@ const block = () => {
 </script>
 
 <template>
-  <div className="courier-form">
-    <div className="form-title"><span>Вызвать курьера</span></div>
-    <div className="name">
+  <div class="courier-form">
+    <div class="form-title"><span>Вызвать курьера</span></div>
+    <div class="name">
       <span>Фамилия и имя</span><input type="text" v-model="formData.fullName" />
       <div v-if="!blockErrorMessages">
-        <span className="error-message" v-for="error in v$.fullName.$errors" :key="error.$uid">{{
+        <span class="error-message" v-for="error in v$.fullName.$errors" :key="error.$uid">{{
           error.$message
         }}</span>
       </div>
     </div>
-    <div className="phone">
+    <div class="phone">
       <span>Телефон</span><input type="text" v-model="formData.phone" />
       <div v-if="!blockErrorMessages">
-        <span className="error-message" v-for="error in v$.phone.$errors" :key="error.$uid">{{
+        <span class="error-message" v-for="error in v$.phone.$errors" :key="error.$uid">{{
           error.$message
         }}</span>
       </div>
     </div>
-    <div className="addres">
+    <div class="addres">
       <span>Адрес</span><input type="text" v-model="formData.address" />
       <div v-if="!blockErrorMessages">
-        <span className="error-message" v-for="error in v$.address.$errors" :key="error.$uid">{{
+        <span class="error-message" v-for="error in v$.address.$errors" :key="error.$uid">{{
           error.$message
         }}</span>
       </div>
     </div>
-    <div className="count">
+    <div class="count">
       <span>Количество пар</span><input type="text" v-model="formData.numberOfShoes" />
       <div v-if="!blockErrorMessages">
-        <span
-          className="error-message"
-          v-for="error in v$.numberOfShoes.$errors"
-          :key="error.$uid"
-          >{{ error.$message }}</span
-        >
-      </div>
-    </div>
-    <div className="email">
-      <span>E-mail</span><input type="text" v-model="formData.email" />
-      <div v-if="!blockErrorMessages">
-        <span className="error-message" v-for="error in v$.email.$errors" :key="error.$uid">{{
+        <span class="error-message" v-for="error in v$.numberOfShoes.$errors" :key="error.$uid">{{
           error.$message
         }}</span>
       </div>
     </div>
-    <button type="submit" className="form-button" @click="submitForm">Отправить</button>
+    <div class="email">
+      <span>E-mail</span><input type="text" v-model="formData.email" />
+      <div v-if="!blockErrorMessages">
+        <span class="error-message" v-for="error in v$.email.$errors" :key="error.$uid">{{
+          error.$message
+        }}</span>
+      </div>
+    </div>
+    <button type="submit" class="form-button" @click="submitForm">Отправить</button>
   </div>
 </template>

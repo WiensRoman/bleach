@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div className="contacts-text flex">
+  <div class="contacts-text flex">
     <p>Приёмные пункты:</p>
     <p>Каширское шоссе 9 (6 этаж) | 12:00 - 20:00 Пн-Пт</p>
     <p>6-я Радиальная улица 5к3 | 10:00 - 21:00 ежедневно Пн-Пт</p>

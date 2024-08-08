@@ -73,9 +73,9 @@ const renderCards = (rowId) => {
 
 <template>
   <div data-aos="fade-down" class="flex justify-center third-slide">
-    <div className="container-fluid">
+    <div class="container-fluid">
       <ComponentHeader title="ПОЧЕМУ МЫ?"></ComponentHeader>
-      <div className="row ts-cards-top" v-for="row in rows" :key="row">
+      <div class="row ts-cards-top" v-for="row in rows" :key="row">
         {{ renderCards(row) }}
         <ThirdSlideItem
           v-for="item in filteredItems"
@@ -86,7 +86,7 @@ const renderCards = (rowId) => {
           :descriptionArr="item.description"
         ></ThirdSlideItem>
       </div>
-      <ComponentButton title="Рассчитать стоимость" :isLink="true" />
+      <ComponentButton title="РАССЧИТАТЬ СТОИМОСТЬ" :isLink="true" />
     </div>
   </div>
 </template>

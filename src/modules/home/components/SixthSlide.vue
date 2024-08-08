@@ -11,11 +11,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div data-aos="fade-down" className="sixth-slide">
-    <div className="container-fluid">
+  <div data-aos="fade-down" class="sixth-slide">
+    <div class="container-fluid">
       <ComponentHeader
         title="ОТЗЫВЫ КЛИЕНТОВ"
-        className="sixth-slide-title text-center"
+        class="sixth-slide-title text-center"
       ></ComponentHeader>
       <SixthSlideSubtitle />
       <SixthSlideReviews />

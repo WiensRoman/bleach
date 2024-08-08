@@ -64,7 +64,7 @@ const arr = [
 
       <img
         v-if="visibleFavoriteButton"
-        className="add"
+        class="add"
         @click="onClickAdd"
         :src="!isAdded ? plusIcon : checked2Icon"
         alt="Plus"
