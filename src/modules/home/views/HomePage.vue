@@ -8,7 +8,6 @@ import SixthSlide from '../components/SixthSlide.vue'
 import SeventhSlide from '../components/SeventhSlide.vue'
 </script>
 <template>
-  <Header></Header>
   <FirstSlide />
   <SecondSlide />
   <ThirdSlide />

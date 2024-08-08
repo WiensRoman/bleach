@@ -11,7 +11,6 @@ import shopImgUrl7 from '../../../assets/images/shop7.png'
 import shopImgUrl8 from '../../../assets/images/shop8.png'
 import shopImgUrl9 from '../../../assets/images/shop9.png'
 import shopImgUrl10 from '../../../assets/images/shop10.png'
-const emit = defineEmits(['onClickRemove'])
 
 defineProps({
   id: Number,
@@ -19,6 +18,8 @@ defineProps({
   imageUrl: String,
   price: Number
 })
+
+const emit = defineEmits(['onClickRemove'])
 
 const arr = [
   shopImgUrl0,

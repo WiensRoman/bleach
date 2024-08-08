@@ -1,7 +1,7 @@
 <script setup>
 import ComponentHeader from '@/core/components/ComponentHeader.vue'
 import ServiceCard from '../components/ServiceCard.vue'
-import Contacts from '@/modules/contacts/components/Contacts.vue'
+import ContactsText from '@/modules/contacts/components/ContactsText.vue'
 import ContactsLinks from '../../contacts/components/ContactsLinks.vue'
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
@@ -303,7 +303,7 @@ const renderCards = (rowId) => {
         </div>
       </div>
       <ComponentHeader title="Контакты" class="text-center"></ComponentHeader>
-      <Contacts />
+      <ContactsText />
       <ContactsLinks />
     </div>
   </div>

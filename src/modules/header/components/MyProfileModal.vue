@@ -5,9 +5,9 @@ import { useVuelidate } from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
 
 const { closeMyProfileModal } = inject('user')
+
 let { thisUserData } = inject('user')
-// const fullnameField = ref()
-// const emailField = ref()
+
 let blockErrorMessages = false
 
 const formUpdateData = reactive({

@@ -73,9 +73,9 @@ const renderCards = (rowId) => {
 
 <template>
   <div data-aos="fade-down" class="flex justify-center third-slide">
-    <div class="container-fluid">
+    <div className="container-fluid">
       <ComponentHeader title="ПОЧЕМУ МЫ?"></ComponentHeader>
-      <div class="row ts-cards-top" v-for="row in rows" :key="row">
+      <div className="row ts-cards-top" v-for="row in rows" :key="row">
         {{ renderCards(row) }}
         <ThirdSlideItem
           v-for="item in filteredItems"

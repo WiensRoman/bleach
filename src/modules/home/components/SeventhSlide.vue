@@ -1,5 +1,5 @@
 <script setup>
-import Contacts from '../../contacts/components/Contacts.vue'
+import ContactsText from '../../contacts/components/ContactsText.vue'
 import ContactsLinks from '../../contacts/components/ContactsLinks.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
@@ -15,7 +15,7 @@ onMounted(async () => {
       <div class="seventh-slide-header">
         <h1>КОНТАКТЫ</h1>
       </div>
-      <Contacts id="contacts"></Contacts>
+      <ContactsText id="contacts"></ContactsText>
       <ContactsLinks />
     </div>
   </div>

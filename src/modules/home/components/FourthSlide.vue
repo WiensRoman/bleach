@@ -71,10 +71,10 @@ let items = [
 </script>
 
 <template>
-  <div data-aos="fade-down" class="fourth-slide">
-    <div class="container-fluid">
+  <div data-aos="fade-down" className="fourth-slide">
+    <div className="container-fluid">
       <ComponentHeader title="НАШИ УСЛУГИ"></ComponentHeader>
-      <div class="fourth-slide-cards row">
+      <div className="fourth-slide-cards row">
         <FourthSlideCard
           v-for="item in items"
           :key="item.index"

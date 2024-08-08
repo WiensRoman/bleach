@@ -14,7 +14,6 @@ import CourierPage from './modules/courier/views/CourierPage.vue'
 import FavoritesPage from './modules/shop/views/FavoritesPage.vue'
 
 const app = createApp(App)
-// app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(PrimeVue, {
   unstyled: true
 })

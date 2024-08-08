@@ -43,9 +43,6 @@ const loginRules = computed(() => {
 
 const v$ = useVuelidate(registrationRules, formRegistrationData)
 const v$Login = useVuelidate(loginRules, formLoginData)
-// const fullName = defineModel('fullName')
-// const email = defineModel('email')
-// const password = defineModel('password')
 
 const createUser = async () => {
   try {

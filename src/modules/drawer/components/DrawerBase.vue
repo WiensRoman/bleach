@@ -15,6 +15,7 @@ const props = defineProps({
 const { cart } = inject('cart')
 
 const isCreating = ref(false)
+
 const orderId = ref(null)
 
 const createOrder = async () => {
@@ -36,6 +37,7 @@ const createOrder = async () => {
 }
 
 const cartIsEmpty = computed(() => cart.value.length === 0)
+
 const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
 </script>
 

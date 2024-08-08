@@ -2,9 +2,11 @@
 import LoginRegistrationModal from './LoginRegistrationModal.vue'
 import MyProfileModal from './MyProfileModal.vue'
 import { inject } from 'vue'
+
 defineProps({
   totalPrice: Number
 })
+
 const { thisUserData } = inject('user')
 const { LoginRegistrationModalOpen } = inject('modal')
 const { myProfileModalOpen } = inject('user')

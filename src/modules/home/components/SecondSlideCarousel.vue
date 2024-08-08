@@ -15,8 +15,6 @@ import { Controller, Navigation, Autoplay } from 'swiper/modules'
       :autoplay="{ delay: 2000 }"
       :swiper-navigation-top-offset="100"
       :swiper-navigation-sides-offset="30"
-      @swiper="onSwiper"
-      @slideChange="onSlideChange"
     >
       <SwiperSlide><img src="../../../assets/images/example1.jpg" /></SwiperSlide>
       <SwiperSlide><img src="../../../assets/images/example2.jpg" /></SwiperSlide>

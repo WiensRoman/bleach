@@ -36,6 +36,7 @@ const submitForm = async () => {
     block()
   }
 }
+
 const block = () => {
   blockErrorMessages = true
 }

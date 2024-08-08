@@ -1,8 +1,6 @@
 <script setup>
-import { onMounted } from 'vue'
 import GalleryHeader from '../components/GalleryHeader.vue'
 import GalleryItem from '../components/GalleryItem.vue'
-// import axios from 'axios'
 import galleryImg0 from '@/assets/images/gallery_0.png'
 import galleryImg1 from '@/assets/images/gallery_1.png'
 import galleryImg2 from '@/assets/images/gallery_2.png'
@@ -70,23 +68,6 @@ let items = [
   { id: 30, imageUrl: galleryImg30 },
   { id: 31, imageUrl: galleryImg31 }
 ]
-
-// let items = ref([])
-
-// const fetchItems = async () => {
-//   try {
-//     const { data } = await axios.get('https://d8618ff445c5b9a8.mokky.dev/gallery', {})
-//     items.value = data.map((obj) => ({
-//       ...obj
-//     }))
-//   } catch (err) {
-//     console.log(err)
-//   }
-// }
-
-onMounted(async () => {
-  // await fetchItems()
-})
 </script>
 
 <template>
