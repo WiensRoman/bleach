@@ -44,28 +44,28 @@ const arr = [
 </script>
 
 <template>
-  <div class="shop-card transition hover:-translate-y-2 hover:shadow-xl">
+  <div class="card transition hover:-translate-y-2 hover:shadow-xl">
     <img
       v-if="visibleFavoriteButton"
       :src="!isFavorite ? like1Icon : like2Icon"
       alt="Like 1"
-      class="like"
+      class="card__like"
       @click="onClickFavorite"
     />
 
     <img :src="arr[id]" alt="Item" />
 
-    <p class="mt-2">{{ title }}</p>
+    <p class="card__title">{{ title }}</p>
 
-    <div class="shop-card__bottom">
-      <div class="shop-card__price">
-        <span class="shop-card__price__title">Цена:</span>
+    <div class="card-bottom">
+      <div class="price">
+        <span class="price__title">Цена:</span>
         <b>{{ price }} руб.</b>
       </div>
 
       <img
         v-if="visibleFavoriteButton"
-        class="add"
+        class="card__add"
         @click="onClickAdd"
         :src="!isAdded ? plusIcon : checked2Icon"
         alt="Plus"

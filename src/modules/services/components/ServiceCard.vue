@@ -10,19 +10,19 @@ defineProps({
 </script>
 
 <template>
-  <div className="services-card сol-lg-4">
-    <div className="services-card-img"><img :src="imageUrl" /></div>
-    <div className="services-card-title">
+  <div className="card">
+    <div className="card__img"><img :src="imageUrl" /></div>
+    <div className="card__title">
       <h4>{{ title }}</h4>
     </div>
-    <div className="services-card-price">
+    <div className="card__price">
       <p>{{ price }}</p>
     </div>
-    <div className="services-card-text">
+    <div className="card__text">
       <p v-for="text in textArr" :key="text.index">{{ text }}</p>
     </div>
     <ComponentButton
-      className="services-card-button"
+      className="card__button"
       title="Рассчитать стоимость"
       :isLink="true"
     ></ComponentButton>

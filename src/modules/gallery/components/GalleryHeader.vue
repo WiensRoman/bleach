@@ -1,11 +1,11 @@
 <script setup></script>
 
 <template>
-  <div class="gallery-slide-title">
+  <div class="gallery__title">
     <h3>ГАЛЕРЕЯ РАБОТ</h3>
     <h3>WIENS BLEACH</h3>
   </div>
-  <div class="gallery-slide-subtitle">
+  <div class="gallery__subtitle">
     <p>Больше примеров работ в формате <span>До/После,</span></p>
     <p>
       а также примеры работ с другими изделиями из кожи и замши у нас в

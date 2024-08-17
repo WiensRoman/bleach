@@ -43,8 +43,8 @@ const block = () => {
 </script>
 
 <template>
-  <div class="courier-form">
-    <div class="form-title"><span>Вызвать курьера</span></div>
+  <div class="form">
+    <div class="form__title"><span>Вызвать курьера</span></div>
     <div class="name">
       <span>Фамилия и имя</span><input type="text" v-model="formData.fullName" />
       <div v-if="!blockErrorMessages">
@@ -85,6 +85,6 @@ const block = () => {
         }}</span>
       </div>
     </div>
-    <button type="submit" class="form-button" @click="submitForm">Отправить</button>
+    <button type="submit" class="button" @click="submitForm">Отправить</button>
   </div>
 </template>

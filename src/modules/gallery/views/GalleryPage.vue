@@ -71,10 +71,10 @@ let items = [
 </script>
 
 <template>
-  <div class="gallery-slide">
-    <div class="container-fluid">
+  <div class="gallery">
+    <div class="gallery__container container-fluid">
       <GalleryHeader />
-      <div class="gallery">
+      <div class="gallery__items">
         <GalleryItem
           v-for="item in items"
           :key="item.index"

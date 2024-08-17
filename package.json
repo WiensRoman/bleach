@@ -31,6 +31,7 @@
     "aos": "^2.3.4",
     "axios": "^1.7.2",
     "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
     "primeicons": "^7.0.0",
     "primevue": "^3.52.0",
     "swiper": "^11.1.4",
@@ -49,6 +50,8 @@
     "http-server": "14.1.1",
     "postcss": "^8.4.38",
     "prettier": "^3.0.3",
+    "sass": "^1.77.8",
+    "sass-embedded": "^1.77.8",
     "tailwindcss": "^3.4.3",
     "vite": "^5.1.6",
     "vite-plugin-vue-devtools": "^7.3.0"

@@ -1,0 +1,70 @@
+.favorites {
+  padding: 120px 220px;
+  padding-bottom: 40px;
+
+  .cards-list {
+    display: grid;
+    position: relative;
+
+    margin-top: 100px;
+    gap: 1.25rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    color: #000;
+
+    .card {
+      position: relative;
+
+      padding: 2rem;
+
+      border-width: 1px;
+
+      border-radius: 1.5rem;
+      border-color: rgb(241 245 249 / 1);
+      background-color: rgb(255 255 255 / 1);
+      cursor: pointer;
+
+      &__like {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+
+        width: 15%;
+      }
+
+      &__add {
+        width: 15%;
+      }
+
+      &__title {
+        margin-top: 0.5rem;
+      }
+
+      .card-bottom {
+        display: flex;
+        margin-top: 1.25rem;
+
+        justify-content: space-between;
+
+        .price {
+          display: flex;
+
+          flex-direction: column;
+
+          &__title {
+            color: rgb(148 163 184 / 1);
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    color: #000;
+    font-size: 26px;
+    line-height: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-align: center;
+  }
+}

@@ -6,5 +6,5 @@ defineProps({
 </script>
 
 <template>
-  <div href="" class="gallery-image"><img :src="imageUrl" /></div>
+  <div href="" class="gallery__items-image"><img :src="imageUrl" /></div>
 </template>

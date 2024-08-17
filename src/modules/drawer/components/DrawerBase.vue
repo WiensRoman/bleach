@@ -43,10 +43,10 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
 
 <template>
   <div class="drawer-window"></div>
-  <div class="drawer-container">
+  <div class="drawer">
     <DrawerHead />
 
-    <div v-if="!totalPrice || orderId" class="drawer-infoblock">
+    <div v-if="!totalPrice || orderId" class="infoblock">
       <DrawerInfoBlock
         v-if="!totalPrice && !orderId"
         title="Корзина пустая"
@@ -65,22 +65,24 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
     <div v-else>
       <DrawerCardList />
 
-      <div v-if="totalPrice" class="drawer-bottom">
-        <div class="drawer-bottom__total__box">
+      <div v-if="totalPrice" class="bottom">
+        <div class="total-box">
           <span>Итого:</span>
-          <div class="drawer-bottom__total"></div>
-          <b>{{ totalPrice }} Р</b>
+          <div class="total-box__price">
+            <b>{{ totalPrice }} Р</b>
+          </div>
         </div>
 
-        <div class="drawer-bottom__tax__box">
+        <div class="tax-box">
           <span>Налог 5%:</span>
-          <div class="drawer-bottom__ta"></div>
-          <b>{{ vatPrice }} Р</b>
+          <div class="tax-box__number">
+            <b>{{ vatPrice }} Р</b>
+          </div>
         </div>
         <button
           :disabled="buttonDisabled"
           @click="createOrder"
-          class="drawer-bottom__order disabled:bg-slate-300 active:bg-lime-700"
+          class="order-button disabled:bg-slate-300 active:bg-lime-700"
         >
           Оформить заказ
         </button>

@@ -4,10 +4,10 @@ import { inject } from 'vue'
 const { closeDrawer } = inject('cart')
 </script>
 <template>
-  <div class="drawer-head">
+  <div class="header">
     <svg
       @click="closeDrawer"
-      class="drawer-arrow rotate-180 hover:opacity-100 transition hover:-translate-x-1"
+      class="header__arrow rotate-180 hover:opacity-100 transition hover:-translate-x-1"
       width="16"
       height="14"
       viewBox="0 0 16 14"
@@ -29,6 +29,6 @@ const { closeDrawer } = inject('cart')
         stroke-linejoin="round"
       />
     </svg>
-    <h2 class="drawer-title">Корзина</h2>
+    <h2 class="header__title">Корзина</h2>
   </div>
 </template>

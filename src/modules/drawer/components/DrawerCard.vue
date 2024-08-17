@@ -37,17 +37,17 @@ const arr = [
 </script>
 
 <template>
-  <div class="drawer-card">
-    <img class="drawer-card__image" :src="arr[id]" :alt="title" />
-
-    <div class="drawer-card__title">
-      <p>{{ title }}</p>
-
-      <div class="drawer-card__price">
+  <div class="card">
+    <img class="card__image" :src="arr[id]" :alt="title" />
+    <div class="card-info">
+      <div class="card-info__title">
+        <p>{{ title }}</p>
+      </div>
+      <div class="card-info__price">
         <b>{{ price }} руб.</b>
         <img
           @click="emit('onClickRemove')"
-          class="drawer-card__remove hover:opacity-100 transition"
+          class="card__remove hover:opacity-100 transition"
           :src="closeIcon"
         />
       </div>

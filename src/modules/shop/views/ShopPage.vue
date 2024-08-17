@@ -121,26 +121,29 @@ watch(filters, fetchItems)
 </script>
 
 <template>
-  <div class="shop-slide">
-    <div class="shop-container">
-      <div class="shop-title">
-        <h3>МАГАЗИН WIENS BLEACH</h3>
-      </div>
-      <div class="shop-subtitle">
-        <p>У нас вы можете приобрести всё необходимое для чистки и ухода за обувью</p>
-      </div>
-      <div class="searcher-row">
-        <div class="searcher-wrapper">
-          <img class="search-icon" src="@/assets/icons/search.svg" />
-          <input @input="onChangeSearchInput" class="searcher" type="text" placeholder="Поиск..." />
-        </div>
-        <select @change="onChangeSelect" class="select">
-          <option value="name">По названию</option>
-          <option value="price">По цене (Дешевые)</option>
-          <option value="-price">По цене (Дорогие)</option>
-        </select>
-      </div>
-      <ShopCardList :items="items" @add-to-favorite="addToFavorite" @add-to-cart="onClickAddPlus" />
+  <div class="shop">
+    <div class="shop__title">
+      <h3>МАГАЗИН WIENS BLEACH</h3>
     </div>
+    <div class="shop__subtitle">
+      <p>У нас вы можете приобрести всё необходимое для чистки и ухода за обувью</p>
+    </div>
+    <div class="searcher">
+      <div class="wrapper">
+        <img class="searcher__search-icon" src="@/assets/icons/search.svg" />
+        <input
+          @input="onChangeSearchInput"
+          class="searcher-input"
+          type="text"
+          placeholder="Поиск..."
+        />
+      </div>
+      <select @change="onChangeSelect" class="select">
+        <option value="name">По названию</option>
+        <option value="price">По цене (Дешевые)</option>
+        <option value="-price">По цене (Дорогие)</option>
+      </select>
+    </div>
+    <ShopCardList :items="items" @add-to-favorite="addToFavorite" @add-to-cart="onClickAddPlus" />
   </div>
 </template>

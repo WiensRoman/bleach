@@ -280,31 +280,29 @@ const renderCards = (rowId) => {
 </script>
 
 <template>
-  <div class="services">
-    <div class="container-fluid">
-      <h3 class="services-title">НАШИ УСЛУГИ</h3>
-      <div class="services-cards">
-        <div class="services-cards-title" v-for="row in rows" :key="row.id">
-          <h3>{{ row.title }}</h3>
+  <div class="services container-fluid">
+    <h3 class="services__title">НАШИ УСЛУГИ</h3>
+    <div class="card-list">
+      <div class="card-list__title" v-for="row in rows" :key="row.id">
+        <h3>{{ row.title }}</h3>
 
-          <div class="row">
-            {{ renderCards(row.id) }}
-            <ServiceCard
-              v-for="item in filteredItems"
-              :key="item.id"
-              :id="item.id"
-              :title="item.title"
-              :price="item.price"
-              :imageUrl="item.imageUrl"
-              :textArr="item.text"
-            >
-            </ServiceCard>
-          </div>
+        <div class="row">
+          {{ renderCards(row.id) }}
+          <ServiceCard
+            v-for="item in filteredItems"
+            :key="item.id"
+            :id="item.id"
+            :title="item.title"
+            :price="item.price"
+            :imageUrl="item.imageUrl"
+            :textArr="item.text"
+          >
+          </ServiceCard>
         </div>
       </div>
-      <ComponentHeader title="Контакты" class="text-center"></ComponentHeader>
-      <ContactsText />
-      <ContactsLinks />
     </div>
+    <ComponentHeader title="Контакты" class="text-center"></ComponentHeader>
+    <ContactsText />
+    <ContactsLinks />
   </div>
 </template>

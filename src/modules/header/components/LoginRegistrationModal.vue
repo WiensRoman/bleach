@@ -116,10 +116,10 @@ const block = () => {
           <img src="../../../assets/icons/icons8-cross-50.png" />
         </div>
         <div class="form-login" v-if="loginForm">
-          <div class="modal-title"><h2>Login</h2></div>
+          <div class="form-login__title"><h2>Login</h2></div>
           <div class="fields-block">
             <div class="email">
-              <span class="modal-field-title">E-mail</span
+              <span class="fields-block__title">E-mail</span
               ><input type="text" v-model="formLoginData.email" />
               <span
                 class="error-message"
@@ -129,7 +129,7 @@ const block = () => {
               >
             </div>
             <div class="password">
-              <span class="modal-field-title">Password</span
+              <span class="fields-block__title">Password</span
               ><input type="password" v-model="formLoginData.password" />
               <span
                 class="error-message"
@@ -139,19 +139,19 @@ const block = () => {
               >
             </div>
           </div>
-          <div class="buttons-row">
-            <button class="modal-button" @click="submitLoginForm">Login</button
-            ><button class="modal-button-second" @click="loginForm = !loginForm">
+          <div class="bottom">
+            <button class="form-button" @click="submitLoginForm">Login</button
+            ><button class="form-button--second" @click="loginForm = !loginForm">
               Registration
             </button>
           </div>
         </div>
 
         <div class="form-register" v-else>
-          <div class="modal-title"><h2>Registration</h2></div>
+          <div class="form-register__title"><h2>Registration</h2></div>
           <div class="fields-block">
             <div class="fio">
-              <span class="modal-field-title">Full name</span
+              <span class="fields-block__title">Full name</span
               ><input type="text" v-model="formRegistrationData.fullName" />
               <div v-if="!blockErrorMessages">
                 <span
@@ -163,7 +163,7 @@ const block = () => {
               </div>
             </div>
             <div class="email">
-              <span class="modal-field-title">E-mail</span
+              <span class="fields-block__title">E-mail</span
               ><input type="text" v-model="formRegistrationData.email" />
               <div v-if="!blockErrorMessages">
                 <span class="error-message" v-for="error in v$.email.$errors" :key="error.$uid">{{
@@ -172,7 +172,7 @@ const block = () => {
               </div>
             </div>
             <div class="password">
-              <span class="modal-field-title">Password</span
+              <span class="fields-block__title">Password</span
               ><input type="password" v-model="formRegistrationData.password.password" />
               <div v-if="!blockErrorMessages">
                 <span
@@ -184,7 +184,7 @@ const block = () => {
               </div>
             </div>
             <div class="password">
-              <span class="modal-field-title">Repeat password</span
+              <span class="fields-block__title">Repeat password</span
               ><input type="password" v-model="formRegistrationData.password.confirm" />
               <div v-if="!blockErrorMessages">
                 <span
@@ -196,17 +196,17 @@ const block = () => {
               </div>
             </div>
           </div>
-          <div class="buttons-row">
-            <button class="modal-button" @click="submitRegistrationForm">Register</button
-            ><button class="modal-button-second" @click="loginForm = !loginForm">Login</button>
+          <div class="bottom">
+            <button class="form-button" @click="submitRegistrationForm">Register</button
+            ><button class="form-button--second" @click="loginForm = !loginForm">Login</button>
           </div>
           <div class="success-message" v-if="successMessage"><span>Успешно!</span></div>
         </div>
 
         <div class="form-border">
-          <span class="form-border-undertitle">Sign in with</span>
+          <span class="form-border__undertitle">Sign in with</span>
         </div>
-        <div class="buttons-row">
+        <div class="social-buttons">
           <button class="access-button">
             <img src="../../../assets/icons/x-twitter-brands-solid.svg" />
             <p>X-twitter</p></button
@@ -216,7 +216,7 @@ const block = () => {
           </button>
         </div>
         <div class="forgot-button">
-          <button class="modal-button-second">Forgot password</button>
+          <button class="form-button--second">Forgot password</button>
         </div>
       </div>
     </div></Teleport

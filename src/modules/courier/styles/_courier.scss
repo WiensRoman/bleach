@@ -1,0 +1,117 @@
+.courier {
+  padding: 160px 120px;
+  padding-bottom: 40px;
+
+  text-align: center;
+
+  .courier-row {
+    display: flex;
+    float: none;
+
+    padding: 0px 60px;
+
+    .form {
+      display: block;
+
+      width: 50%;
+      padding: 25px 100px;
+      padding-left: 25px;
+
+      border-radius: 15px;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+
+      .button {
+        display: flex;
+
+        margin-top: 10px;
+        padding: 10px 20px;
+
+        border-radius: 10px;
+        border-bottom: 2.5px #e6ae6d solid;
+        background-color: #f6d19e;
+        transition: all 0.4s ease;
+        &:hover {
+          background-color: #b99f78;
+        }
+      }
+
+      &__title {
+        display: flex;
+
+        margin-bottom: 40px;
+
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+
+        span {
+          background-image: linear-gradient(to right, #f6d19e 0, #f6d19e 100%);
+          background-size: 100% 28%;
+          background-repeat: no-repeat;
+          background-position: left 90%;
+        }
+      }
+
+      span {
+        display: flex;
+        color: #000;
+        font-weight: 700;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid transparent;
+
+        color: #555;
+        background-color: rgba(0, 0, 0, 0.04);
+        background-color: #f1f1f1;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: inherit;
+        line-height: 24px;
+        transition: all 0.2s ease;
+
+        &:focus {
+          border-color: #f6d19e;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+          outline: 0;
+        }
+      }
+    }
+
+    .info {
+      display: block;
+
+      padding: 80px;
+
+      .description {
+        display: flex;
+        position: relative;
+
+        margin-top: 40px;
+
+        text-align: left;
+
+        &__icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          width: 30px;
+        }
+      }
+
+      p {
+        display: flex;
+
+        margin-left: 55px;
+
+        color: #000;
+        font-weight: 700;
+      }
+    }
+  }
+}
