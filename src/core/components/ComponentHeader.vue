@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="text-center">
+  <div class="component-header">
     <h1>{{ title }}</h1>
   </div>
 </template>

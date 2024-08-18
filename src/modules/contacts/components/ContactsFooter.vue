@@ -1,6 +1,6 @@
 <script setup>
-import ContactsText from '../../contacts/components/ContactsText.vue'
-import ContactsLinks from '../../contacts/components/ContactsLinks.vue'
+import ContactsText from './ContactsText.vue'
+import ContactsLinks from './ContactsLinks.vue'
 import { onMounted } from 'vue'
 import AOS from 'aos'
 
@@ -10,9 +10,9 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div data-aos="fade-down" class="seventh-slide">
-    <div class="container-fluid flex">
-      <div class="seventh-slide-header">
+  <div data-aos="fade-down" class="contacts">
+    <div class="container-fluid">
+      <div class="contacts__header">
         <h1>КОНТАКТЫ</h1>
       </div>
       <ContactsText id="contacts"></ContactsText>

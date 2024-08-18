@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-  <div class="fs-line_first flex items-center w-96">
-    <div class="fs-line-icon mr-2.5 w-8">
+  <div class="line-first-item">
+    <div class="line-first-item__icon mr-2.5 w-8">
       <a href="https://www.instagram.com/romanwiens"
         ><svg class="mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path
@@ -11,7 +11,7 @@
           /></svg
       ></a>
     </div>
-    <div class="fs-line-icon mr-2.5 w-8">
+    <div class="line-first-item__icon mr-2.5 w-8">
       <a href="https://t.me/Wiensus"
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
           <path
@@ -20,7 +20,7 @@
           /></svg
       ></a>
     </div>
-    <div class="fs-line_line w-40 mr-2.5 border-t-2"></div>
-    <div class="fs-line-text w-40">МЫ В СОЦСЕТЯХ</div>
+    <div class="line-first-item__line"></div>
+    <div class="line-first-item__text">МЫ В СОЦСЕТЯХ</div>
   </div>
 </template>

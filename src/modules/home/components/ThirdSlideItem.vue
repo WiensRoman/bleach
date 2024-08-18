@@ -8,17 +8,17 @@ defineProps({
 </script>
 
 <template>
-  <div class="ts-card" :style="{ backgroundImage: 'url(' + imageUrl + ')' }">
-    <div className="ts-card-title">
+  <div class="third-slide-card" :style="{ backgroundImage: 'url(' + imageUrl + ')' }">
+    <div class="third-slide-card__title">
       <h3>{{ title }}</h3>
     </div>
-    <div class="ts-card-text">
+    <div class="third-slide-card__text">
       <p v-for="dscr in descriptionArr" :key="dscr.index">{{ dscr }}</p>
     </div>
-    <div v-if="id == 1" className="ts-image">
+    <div v-if="id == 1" class="third-slide-card__image">
       <img src="../../../assets/images/component_2.png" />
     </div>
-    <div v-else-if="id == 3" className="ts-image-dostavka">
+    <div v-else-if="id == 3" class="third-slide-card__image-dostavka">
       <img src="../../../assets/images/dostavka.png" />
     </div>
   </div>

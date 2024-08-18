@@ -14,13 +14,13 @@ const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal', 'openMyPro
 </script>
 
 <template>
-  <ul class="flex items-center gap-5">
-    <li @click="() => emit('openDrawer')" class="header-profile">
+  <ul class="header-profile">
+    <li @click="() => emit('openDrawer')" class="header-profile__item">
       <img src="../../../assets/icons/cart.svg" alt="Cart" />
       <span>{{ totalPrice }} руб.</span>
     </li>
     <RouterLink to="/favorites"
-      ><li class="header-profile">
+      ><li class="header-profile__item">
         <img src="../../../assets/icons/heart.svg" alt="Cart" />
         <span>Закладки</span>
       </li></RouterLink
@@ -29,12 +29,12 @@ const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal', 'openMyPro
     <li
       v-if="!thisUserData"
       @click="() => emit('openLoginRegistrationModal')"
-      class="header-profile"
+      class="header-profile__item"
     >
       <img src="../../../assets/icons/profile.svg" alt="Cart" />
       <span>Профиль</span>
     </li>
-    <li v-else @click="() => (myProfileModalOpen = true)" class="header-profile">
+    <li v-else @click="() => (myProfileModalOpen = true)" class="header-profile__item">
       <img src="../../../assets/icons/profile.svg" alt="Cart" />
       <span>{{ thisUserData.fullName }}</span>
     </li>

@@ -5,7 +5,7 @@ import ThirdSlide from '../components/ThirdSlide.vue'
 import FourthSlide from '../components/FourthSlide.vue'
 import FifthSlide from '../components/FifthSlide.vue'
 import SixthSlide from '../components/SixthSlide.vue'
-import SeventhSlide from '../components/SeventhSlide.vue'
+import ContactsFooter from '../../contacts/components/ContactsFooter.vue'
 </script>
 <template>
   <FirstSlide />
@@ -14,7 +14,7 @@ import SeventhSlide from '../components/SeventhSlide.vue'
   <FourthSlide />
   <FifthSlide />
   <SixthSlide />
-  <SeventhSlide />
+  <ContactsFooter />
 </template>
 
 <style scoped></style>

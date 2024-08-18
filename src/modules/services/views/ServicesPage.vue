@@ -1,8 +1,6 @@
 <script setup>
-import ComponentHeader from '@/core/components/ComponentHeader.vue'
 import ServiceCard from '../components/ServiceCard.vue'
-import ContactsText from '@/modules/contacts/components/ContactsText.vue'
-import ContactsLinks from '../../contacts/components/ContactsLinks.vue'
+import ContactsFooter from '../../contacts/components/ContactsFooter.vue'
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import serviceImg1 from '../../../assets/images/service_1.png'
@@ -301,8 +299,6 @@ const renderCards = (rowId) => {
         </div>
       </div>
     </div>
-    <ComponentHeader title="Контакты" class="text-center"></ComponentHeader>
-    <ContactsText />
-    <ContactsLinks />
+    <ContactsFooter />
   </div>
 </template>

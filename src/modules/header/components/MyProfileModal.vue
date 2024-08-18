@@ -87,9 +87,9 @@ const exit = () => {
       </div>
     </div>
 
-    <div class="buttons-row">
-      <button class="modal-button" @click="submitForm">Сохранить</button
-      ><button class="modal-button-second" @click="exit">Выйти</button>
+    <div class="bottom">
+      <button class="form-button" @click="submitForm">Сохранить</button
+      ><button class="form-button--second" @click="exit">Выйти</button>
     </div>
   </div>
 </template>

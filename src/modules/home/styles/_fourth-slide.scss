@@ -1,0 +1,84 @@
+.fourth-slide {
+  margin-top: 100px;
+
+  background-color: #efefef;
+
+  .container-fluid {
+    display: flex;
+
+    padding: 90px 150px;
+
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .fourth-slide-cards {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fourth-slide-card {
+      display: flex;
+      flex: 0 0 auto;
+
+      width: 33.33333333%;
+      width: 456px;
+      height: 326px;
+
+      background-size: cover;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__title {
+        h4 {
+          font-family: 'Playfair Display';
+          font-size: 26px;
+          font-weight: 600;
+        }
+      }
+
+      &__subtitle {
+        margin: 12px 0;
+        height: 1px;
+        width: 103px;
+
+        background-color: #dac19b;
+      }
+
+      &__text {
+        p {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+
+      &__price {
+        p {
+          margin-top: 5px;
+
+          font-weight: 600;
+          font-size: 15px;
+        }
+      }
+
+      .fourth-slide-card-button {
+        margin-top: 15px;
+        padding: 8px 55px;
+
+        border: 1px #dac19b solid;
+        border-radius: 5px;
+
+        color: #fff;
+        font-size: 14px;
+        transition: all 0.4s ease;
+
+        &:hover {
+          background-color: #dac19b;
+          border: 1px #6b593f solid;
+        }
+      }
+    }
+  }
+}

@@ -10,13 +10,13 @@ defineProps({
 </script>
 
 <template>
-  <div class="fifth-slide-card flex">
-    <div class="fifth-slide-card-img"><img :src="imageUrl" /></div>
-    <div class="fifth-slide-card-text">
-      <div class="fifth-slide-card-title">
+  <div class="fifth-slide-card">
+    <div class="fifth-slide-card__img"><img :src="imageUrl" /></div>
+    <div class="fifth-slide-card__text">
+      <div class="fifth-slide-card__title">
         <h3>{{ title }}</h3>
       </div>
-      <div class="fifth-slide-card-subtitle">
+      <div class="fifth-slide-card__subtitle">
         <p v-for="subtitle in subtitleArr" :key="subtitle.index">{{ subtitle }}</p>
         <br />
       </div>

@@ -1,0 +1,102 @@
+.contacts {
+  display: flex;
+
+  color: #000;
+  flex-direction: column;
+
+  & > .container-fluid {
+    display: flex;
+
+    flex-direction: column;
+
+    .contacts-header {
+      text-align: center;
+
+      margin-top: 70px;
+    }
+
+    .contacts-text {
+      display: flex;
+
+      flex-direction: column;
+
+      p {
+        margin-top: 22px;
+
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: #000;
+      }
+    }
+
+    .contacts-links {
+      display: flex;
+
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+
+      align-items: center;
+
+      .contacts-buttons {
+        .contacts-button {
+          display: flex;
+
+          padding: 13px 20px;
+          margin-top: 15px;
+
+          border: 2px #dac19b solid;
+
+          background-color: #fff;
+          border-radius: 5px;
+          justify-content: center;
+          color: #000;
+          transition: all 0.4s ease;
+
+          &:hover {
+            color: #fff;
+            background-color: #dac19b;
+          }
+        }
+
+        .second {
+          width: 100%;
+
+          background-color: #dac19b;
+          color: #fff;
+
+          &:hover {
+            color: #000;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    .contacts__stick {
+      width: 1px;
+      height: 100px;
+      margin: 0 40px;
+
+      background-color: #dac19b;
+    }
+    .contacts-icons {
+      .icons-line {
+        display: flex;
+
+        width: 2rem;
+        margin-right: 1rem;
+        margin-left: 2rem;
+
+        flex-direction: column;
+
+        a {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

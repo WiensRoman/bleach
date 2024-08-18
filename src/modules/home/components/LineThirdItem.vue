@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="fs-line_third ml-auto mr-24 relative">
+  <div class="line-third-item">
     <img src="@/assets/images/Linked_Path_Group.png" />
-    <div class="fs-line_third-text">
+    <div class="line-third-item__text">
       <p>Отправьте фотографию</p>
       <p>и получите детальную</p>
       <p>оценку вашей обуви и</p>

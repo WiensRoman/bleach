@@ -12,7 +12,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div data-aos="fade-down" class="second-slide mt-16">
+  <div data-aos="fade-down" class="second-slide">
     <div class="container-fluid">
       <ComponentHeader title="НАШИ РАБОТЫ ДО/ПОСЛЕ" />
       <SecondSlideCarousel />

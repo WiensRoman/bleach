@@ -1,0 +1,52 @@
+.second-slide-carousel {
+  position: relative;
+
+  margin-top: 50px;
+  max-width: 580px;
+  max-height: 580px;
+
+  border: 4px #dac19b solid;
+  border-radius: 15px;
+}
+
+.second-slide {
+  margin-top: 4rem;
+
+  .container-fluid {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .second-slide__text {
+      margin-top: 2.25rem;
+
+      p {
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+    }
+
+    .second-slide-button {
+      margin-top: 30px;
+      padding: 15px 80px;
+
+      border-radius: 5px;
+      color: #fff;
+      background-color: #dac19b;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #b99f78;
+        cursor: pointer;
+      }
+    }
+  }
+}

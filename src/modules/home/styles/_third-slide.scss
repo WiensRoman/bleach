@@ -1,0 +1,87 @@
+.third-slide {
+  display: flex;
+
+  margin-top: 100px;
+
+  justify-content: center;
+
+  .container-fluid {
+    display: flex;
+
+    flex-direction: column;
+
+    .third-slide-top {
+      display: flex;
+
+      margin-right: 1.5rem;
+      margin-top: 0;
+      margin-left: 1.5rem;
+
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .third-slide-card {
+        position: relative;
+
+        padding: 80px 80px;
+        padding-right: 0;
+        padding-bottom: 0;
+        height: 536px;
+        width: 565px;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &__title {
+          width: 80%;
+
+          h3 {
+            position: relative;
+
+            z-index: 3;
+
+            color: #000;
+            font-size: 23px;
+            font-weight: 600;
+          }
+        }
+
+        &__text {
+          p {
+            color: #000;
+            font-size: 20px;
+          }
+        }
+
+        .third-slide-card__image {
+          img {
+            max-width: 200px;
+            position: absolute;
+            top: 151px;
+            right: 35px;
+            z-index: 1;
+          }
+        }
+        .third-slide-card__image-dostavka {
+          img {
+            max-width: 310px;
+            position: absolute;
+            top: 380px;
+            right: 60px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.third-slide-card-button p,
+.third-slide-card-button-1134px p {
+  text-transform: uppercase;
+  color: #000;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}

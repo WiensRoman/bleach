@@ -1,0 +1,128 @@
+.first-slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .first-slide-container {
+    padding: 140px 0;
+  }
+
+  & > img {
+    position: absolute;
+    z-index: -1;
+    max-height: 82%;
+  }
+
+  .first-slide-container__title {
+    text-align: center;
+    h2 {
+      span {
+        color: rgb(217, 192, 154);
+      }
+    }
+  }
+
+  .first-slide-container__subtitle {
+    text-align: center;
+    margin-top: 40px;
+    p {
+      font-size: 22px;
+      span {
+        color: rgb(217, 192, 154);
+      }
+    }
+  }
+
+  .line {
+    display: flex;
+
+    padding: 0 100px;
+
+    align-items: center;
+
+    .line-first-item {
+      display: flex;
+      width: 24rem;
+
+      align-items: center;
+      transform: rotate(-90deg);
+
+      &__icon {
+        width: 2rem;
+        margin-right: 0.625rem;
+
+        transform: rotate(90deg);
+        cursor: pointer;
+      }
+
+      &__line {
+        width: 10rem;
+        margin-right: 0.625rem;
+        border-top-width: 2px;
+      }
+
+      &__text {
+        width: 10rem;
+      }
+    }
+    .line-second-item {
+      width: 280px;
+      margin-left: auto;
+
+      &__button {
+        display: flex;
+
+        padding: 25px 30px;
+
+        border-bottom: 2.5px #e6ae6d solid;
+        border-radius: 13px;
+
+        background-color: #f6d19e;
+        transition: all 0.4s ease;
+        justify-content: center;
+
+        &:hover {
+          background-color: #b99f78;
+        }
+      }
+    }
+
+    .line-third-item {
+      position: relative;
+      margin-right: 6rem;
+      margin-left: auto;
+
+      img {
+        max-height: 300px;
+        animation: 10s linear infinite rotate;
+      }
+
+      &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        p {
+          font-weight: 700;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.d-flex {
+  display: flex !important;
+}
