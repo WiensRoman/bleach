@@ -1,12 +1,24 @@
 <script setup>
 import { inject } from 'vue'
+import { useTabStore } from '../../../stores/TabStore.js'
+import { useRoute } from 'vue-router'
+
+const location = useRoute()
+
+const tabStore = useTabStore()
 
 const { closeDrawer } = inject('cart')
+tabStore.checkActiveTab(location)
 </script>
 <template>
   <div class="header">
     <svg
-      @click="closeDrawer"
+      @click="
+        () => {
+          closeDrawer()
+          tabStore.checkActiveTab(location)
+        }
+      "
       class="header__arrow rotate-180 hover:opacity-100 transition hover:-translate-x-1"
       width="16"
       height="14"

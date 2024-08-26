@@ -2,7 +2,7 @@ import './assets/styles/main.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import PrimeVue from 'primevue/config'
+import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
 import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import 'aos/dist/aos.css'
@@ -14,9 +14,8 @@ import CourierPage from './modules/courier/views/CourierPage.vue'
 import FavoritesPage from './modules/shop/views/FavoritesPage.vue'
 
 const app = createApp(App)
-app.use(PrimeVue, {
-  unstyled: true
-})
+
+const pinia = createPinia()
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
@@ -41,6 +40,7 @@ const router = createRouter({
   }
 })
 
+app.use(pinia)
 app.use(router)
 app.use(autoAnimatePlugin)
 app.mount('#app')

@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
-
 import ShopCardList from '../components/ShopCardList.vue'
 const favorites = ref([])
 

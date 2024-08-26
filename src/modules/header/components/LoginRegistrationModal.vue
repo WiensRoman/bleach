@@ -3,6 +3,12 @@ import { inject, ref, reactive, computed } from 'vue'
 import axios from 'axios'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength, sameAs } from '@vuelidate/validators'
+import { useTabStore } from '../../../stores/TabStore.js'
+import { useRoute } from 'vue-router'
+
+const location = useRoute()
+
+const tabStore = useTabStore()
 
 const { closeLoginRegistrationModal } = inject('modal')
 let { thisUserData } = inject('user')
@@ -112,7 +118,15 @@ const block = () => {
     ><div class="shadow"></div>
     <div class="profile-modal">
       <div class="modal-container">
-        <div class="close-button" @click="closeLoginRegistrationModal">
+        <div
+          class="close-button"
+          @click="
+            () => {
+              closeLoginRegistrationModal()
+              tabStore.checkActiveTab(location)
+            }
+          "
+        >
           <img src="../../../assets/icons/icons8-cross-50.png" />
         </div>
         <div class="form-login" v-if="loginForm">

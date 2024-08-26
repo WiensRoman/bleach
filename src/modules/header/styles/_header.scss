@@ -39,6 +39,12 @@ header {
       font-size: 18px;
       line-height: 28px;
 
+      .active::before {
+        transform: scaleX(1);
+        transition: transform 0.3s;
+        transform-origin: left;
+      }
+
       span {
         cursor: pointer;
       }
@@ -143,6 +149,12 @@ header {
       line-height: 28px;
       cursor: pointer;
       color: #000;
+
+      .active::before {
+        transform: scaleX(1);
+        transition: transform 0.3s;
+        transform-origin: left;
+      }
 
       span {
         margin-left: 10px;
