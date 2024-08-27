@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, computed, watch } from 'vue'
+import { ref, watch } from 'vue'
 
 export const useTabStore = defineStore('tabStore', () => {
   const activeTab = ref(null)

@@ -3,7 +3,6 @@
 import HeaderLine from './HeaderLine.vue'
 import HeaderProfile from './HeaderProfile.vue'
 import { useTabStore } from '../../../stores/TabStore.js'
-import { onBeforeMount, onMounted } from 'vue'
 
 const tabStore = useTabStore()
 
@@ -14,8 +13,6 @@ const setTab = (id) => {
 defineProps({
   totalPrice: Number
 })
-
-const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal'])
 </script>
 
 <template>
@@ -27,10 +24,6 @@ const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal'])
     </div>
 
     <HeaderLine />
-    <HeaderProfile
-      :total-price="totalPrice"
-      @open-drawer="emit('openDrawer')"
-      @open-login-registration-modal="emit('openLoginRegistrationModal')"
-    />
+    <HeaderProfile :total-price="totalPrice" />
   </header>
 </template>

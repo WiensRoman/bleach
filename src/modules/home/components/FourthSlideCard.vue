@@ -1,4 +1,10 @@
 <script setup>
+import service0 from '@/assets/images/Fourth_slide_service_0.png'
+import service1 from '@/assets/images/Fourth_slide_service_1.png'
+import service2 from '@/assets/images/Fourth_slide_service_2.png'
+import service3 from '@/assets/images/Fourth_slide_service_3.png'
+import service4 from '@/assets/images/Fourth_slide_service_4.png'
+import service5 from '@/assets/images/Fourth_slide_service_5.png'
 defineProps({
   id: Number,
   title: String,
@@ -6,6 +12,7 @@ defineProps({
   price: String,
   imageUrl: String
 })
+const arr = [service0, service1, service2, service3, service4, service5]
 </script>
 
 <template>

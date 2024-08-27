@@ -1,22 +1,56 @@
 <script setup>
 import LoginRegistrationModal from './LoginRegistrationModal.vue'
 import MyProfileModal from './MyProfileModal.vue'
-import { inject } from 'vue'
+import { ref, provide } from 'vue'
 import { useTabStore } from '../../../stores/TabStore.js'
+import { useCartStore } from '../../../stores/CartStore.js'
 
 defineProps({
   totalPrice: Number
 })
 
 const tabStore = useTabStore()
+const cartStore = useCartStore()
 
 const setTab = (id) => {
   tabStore.setActiveTab(id)
 }
-const { thisUserData } = inject('user')
-const { LoginRegistrationModalOpen } = inject('modal')
-const { myProfileModalOpen } = inject('user')
-const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal', 'openMyProfileModal'])
+
+const myProfileModalOpen = ref(false)
+
+let thisUserData = ref(null)
+const closeMyProfileModal = () => {
+  myProfileModalOpen.value = false
+}
+
+const openMyProfileModal = () => {
+  myProfileModalOpen.value = true
+}
+
+const LoginRegistrationModalOpen = ref(false)
+
+const closeLoginRegistrationModal = () => {
+  LoginRegistrationModalOpen.value = false
+}
+
+const openLoginRegistrationModal = () => {
+  LoginRegistrationModalOpen.value = true
+
+  console.log(LoginRegistrationModalOpen.value)
+}
+
+provide('modal', {
+  openLoginRegistrationModal,
+  closeLoginRegistrationModal,
+  LoginRegistrationModalOpen
+})
+
+provide('user', {
+  thisUserData,
+  openMyProfileModal,
+  closeMyProfileModal,
+  myProfileModalOpen
+})
 </script>
 
 <template>
@@ -24,7 +58,7 @@ const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal', 'openMyPro
     <li
       @click="
         () => {
-          emit('openDrawer')
+          cartStore.openDrawer()
           setTab(7)
         }
       "
@@ -44,7 +78,7 @@ const emit = defineEmits(['openDrawer', 'openLoginRegistrationModal', 'openMyPro
       v-if="!thisUserData"
       @click="
         () => {
-          emit('openLoginRegistrationModal')
+          openLoginRegistrationModal()
           setTab(9)
         }
       "

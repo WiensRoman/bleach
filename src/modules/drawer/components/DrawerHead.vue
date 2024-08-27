@@ -1,13 +1,14 @@
 <script setup>
-import { inject } from 'vue'
 import { useTabStore } from '../../../stores/TabStore.js'
 import { useRoute } from 'vue-router'
+import { useCartStore } from '../../../stores/CartStore.js'
+
+const cartStore = useCartStore()
 
 const location = useRoute()
 
 const tabStore = useTabStore()
 
-const { closeDrawer } = inject('cart')
 tabStore.checkActiveTab(location)
 </script>
 <template>
@@ -15,7 +16,7 @@ tabStore.checkActiveTab(location)
     <svg
       @click="
         () => {
-          closeDrawer()
+          cartStore.closeDrawer()
           tabStore.checkActiveTab(location)
         }
       "
