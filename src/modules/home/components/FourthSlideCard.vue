@@ -16,7 +16,7 @@ const arr = [service0, service1, service2, service3, service4, service5]
 </script>
 
 <template>
-  <div class="fourth-slide-card" :style="{ backgroundImage: 'url(' + imageUrl + ')' }">
+  <div class="fourth-slide-card" :style="{ backgroundImage: 'url(' + arr[id] + ')' }">
     <div class="fourth-slide-card__title">
       <h4>{{ title }}</h4>
     </div>
