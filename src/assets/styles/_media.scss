@@ -287,7 +287,7 @@
     display: block;
   }
   .header-1260px-logo img {
-    max-width: 142px;
+    max-width: 136px;
   }
   .header-1260px .container-fluid {
     align-items: center;
@@ -455,6 +455,11 @@
     max-width: 120px;
     top: 260px;
     right: 50px;
+  }
+  .header-1260px {
+    .container {
+      width: 70% !important;
+    }
   }
 }
 @media screen and (max-width: 520px) {
