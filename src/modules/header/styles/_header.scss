@@ -1,4 +1,11 @@
 header {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 100;
+}
+
+.header {
   display: flex;
   position: fixed;
 
@@ -15,7 +22,7 @@ header {
 
   .header__logo {
     max-width: 10%;
-    margin-right: 15%;
+    margin-right: auto;
     img {
       max-height: 80px;
       max-width: 146px;

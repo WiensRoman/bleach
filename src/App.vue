@@ -22,6 +22,8 @@ const removeFromCart = (item) => {
   item.isAdded = false
 }
 
+let openMobileMenu = ref(false)
+
 watch(
   cart,
   () => {
@@ -35,6 +37,8 @@ provide('cart', {
   addToCart,
   removeFromCart
 })
+
+provide('mobile', { openMobileMenu, totalPrice })
 </script>
 <template>
   <DrawerBase v-if="cartStore.drawerOpen" :total-price="totalPrice" :vatPrice="vatPrice" />

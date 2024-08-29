@@ -53,7 +53,7 @@ const arr = [
       @click="onClickFavorite"
     />
 
-    <img :src="arr[id]" alt="Item" />
+    <img class="card__image" :src="arr[id]" alt="Item" />
 
     <p class="card__title">{{ title }}</p>
 

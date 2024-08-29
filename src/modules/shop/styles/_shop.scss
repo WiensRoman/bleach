@@ -97,16 +97,21 @@
       background-color: rgb(255 255 255 / 1);
       cursor: pointer;
 
+      .card__image {
+        min-width: 60px;
+      }
+
       &__like {
         position: absolute;
         top: 2rem;
         left: 2rem;
 
         width: 15%;
+        min-width: 20px;
       }
 
       &__add {
-        width: 15%;
+        width: 30px;
       }
 
       &__title {

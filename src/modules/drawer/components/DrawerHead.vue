@@ -12,7 +12,7 @@ const tabStore = useTabStore()
 tabStore.checkActiveTab(location)
 </script>
 <template>
-  <div class="header">
+  <div class="drawer-header">
     <svg
       @click="
         () => {
@@ -20,7 +20,7 @@ tabStore.checkActiveTab(location)
           tabStore.checkActiveTab(location)
         }
       "
-      class="header__arrow rotate-180 hover:opacity-100 transition hover:-translate-x-1"
+      class="drawer-header__arrow rotate-180 hover:opacity-100 transition hover:-translate-x-1"
       width="16"
       height="14"
       viewBox="0 0 16 14"
@@ -42,6 +42,6 @@ tabStore.checkActiveTab(location)
         stroke-linejoin="round"
       />
     </svg>
-    <h2 class="header__title">Корзина</h2>
+    <h2 class="drawer-header__title">Корзина</h2>
   </div>
 </template>
