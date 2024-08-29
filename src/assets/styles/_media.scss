@@ -272,8 +272,11 @@
   .contacts-icons i {
     font-size: 40px;
   }
-  .contacts-stick {
+  .contacts__stick {
     margin: 0 10px !important;
+  }
+  .contacts-icons .icons-line {
+    margin-left: 0 !important;
   }
 }
 @media screen and (max-width: 725px) {
