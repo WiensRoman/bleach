@@ -267,10 +267,13 @@
     line-height: 18px;
   }
   .fifth-slide-card {
-    padding: 25px 25px;
+    padding: 25px 25px !important;
   }
   .contacts-icons i {
     font-size: 40px;
+  }
+  .contacts-stick {
+    margin: 0 10px !important;
   }
 }
 @media screen and (max-width: 725px) {
