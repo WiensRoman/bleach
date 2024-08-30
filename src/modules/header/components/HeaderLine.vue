@@ -1,6 +1,8 @@
 <script setup>
-import HeaderIconsWrapper from './HeaderIconsWrapper.vue'
 import { useTabStore } from '../../../stores/TabStore.js'
+import insagramIcon from '../../../assets/icons/instagram-black.svg'
+import whatsappIcon from '../../../assets/icons/whatsapp-black.svg'
+import telegramIcon from '../../../assets/icons/telegram-black.svg'
 
 const tabStore = useTabStore()
 
@@ -47,16 +49,14 @@ const setTab = (id) => {
     <div class="icons">
       <div class="icon">
         <a href="https://www.instagram.com/romanwiens">
-          <img src="../../../assets/icons/instagram-black.svg" />
+          <img :src="insagramIcon" />
         </a>
       </div>
       <div class="icon">
-        <a href="https://wa.me//79255163317"
-          ><img src="../../../assets/icons/whatsapp-black.svg"
-        /></a>
+        <a href="https://wa.me//79255163317"><img :src="whatsappIcon" /></a>
       </div>
       <div class="icon" style="margin-top: 27%">
-        <a href="https://t.me/Wiensus"><img src="../../../assets/icons/telegram-black.svg" /></a>
+        <a href="https://t.me/Wiensus"><img :src="telegramIcon" /></a>
       </div>
     </div>
   </div>
