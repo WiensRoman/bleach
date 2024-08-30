@@ -44,6 +44,20 @@ const setTab = (id) => {
     <div class="phone">
       <a href="tel:+79255163317">+7(925)516-33-17</a>
     </div>
-    <HeaderIconsWrapper class="icons" />
+    <div class="icons">
+      <div class="icon">
+        <a href="https://www.instagram.com/romanwiens">
+          <img src="../../../assets/icons/instagram-black.svg" />
+        </a>
+      </div>
+      <div class="icon">
+        <a href="https://wa.me//79255163317"
+          ><img src="../../../assets/icons/whatsapp-black.svg"
+        /></a>
+      </div>
+      <div class="icon" style="margin-top: 27%">
+        <a href="https://t.me/Wiensus"><img src="../../../assets/icons/telegram-black.svg" /></a>
+      </div>
+    </div>
   </div>
 </template>
